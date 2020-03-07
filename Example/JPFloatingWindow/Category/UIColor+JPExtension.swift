@@ -1,6 +1,6 @@
 //
 //  UIColor+JPExtension.swift
-//  JPPresentationLayerDemo_Example
+//  JPFloatingWindow
 //
 //  Created by 周健平 on 2020/2/28.
 //  Copyright © 2020 CocoaPods. All rights reserved.

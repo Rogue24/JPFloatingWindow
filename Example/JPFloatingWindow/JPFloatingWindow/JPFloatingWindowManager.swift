@@ -1,6 +1,6 @@
 //
 //  JPFloatingWindowManager.swift
-//  JPPresentationLayerDemo_Example
+//  JPFloatingWindow
 //
 //  Created by 周健平 on 2020/3/5.
 //  Copyright © 2020 CocoaPods. All rights reserved.

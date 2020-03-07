@@ -1,6 +1,6 @@
 //
 //  JPFloatingWindowAnimator.swift
-//  JPPresentationLayerDemo_Example
+//  JPFloatingWindow
 //
 //  Created by 周健平 on 2020/3/3.
 //  Copyright © 2020 CocoaPods. All rights reserved.
@@ -29,23 +29,7 @@ class JPFloatingWindowAnimator: NSObject {
 // MARK:- <UINavigationControllerDelegate>
 extension JPFloatingWindowAnimator: UINavigationControllerDelegate {
     func navigationController(_ navigationController: UINavigationController, animationControllerFor operation: UINavigationController.Operation, from fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        navCtr = navigationController
-        self.fromVC = fromVC
-        self.toVC = toVC
-        
-        if let shrinkFwVC = shrinkFwVC {
-            shrinkFwVC.jp_navigationController(navigationController, animationWillBeginFor: isPush, from: fromVC, to: toVC)
-            return isPush ? nil : self
-        } else if let spreadFw = spreadFw {
-            spreadFw.floatingVC.jp_navigationController(navigationController, animationWillBeginFor: isPush, from: fromVC, to: toVC)
-            return self
-        }
-        
-        return nil
-    }
-    
-    func navigationController(_ navigationController: UINavigationController, didShow viewController: UIViewController, animated: Bool) {
-        jp_navigationAnimationDone(isFinish: true, isInteractive: false)
+        return self
     }
 }
 
@@ -84,7 +68,7 @@ extension JPFloatingWindowAnimator {
         spreadFw = nil
     }
     
-    func jp_navigationAnimationDone(isFinish: Bool, isInteractive: Bool, _ percent: CGFloat = 0) {
+    func jp_navigationAnimationDone(isFinish: Bool) {
         guard let navCtr = self.navCtr else {
             clearReferences()
             return
@@ -95,37 +79,18 @@ extension JPFloatingWindowAnimator {
         }
         
         if let spreadFw = self.spreadFw {
-            if let fromVC = fromVC, let toVC = toVC {
-                spreadFw.floatingVC.jp_navigationController(navCtr, animationEndedFor: isPush, from: fromVC, to: toVC)
-            }
-            
             if let index = JPFwManager.floatingWindows.firstIndex(of: spreadFw) {
                 JPFwManager.floatingWindows.remove(at: index)
                 JPFwManager.floatingWindowsHasDidChanged?(false, index)
             }
-            
-            clearReferences()
-            return
-        }
-        
-        
-        guard let shrinkFwVC = shrinkFwVC else {
-            clearReferences()
-            return
-        }
-        
-        if isPush == false, isInteractive == true {
-            if isFinish == true, decideView.isTouching {
-                jp_startShrinkFloatingWindowAnimation(percent: percent)
-            }
-            decideView.decideDoneAnimation()
         }
         
         if let fromVC = fromVC, let toVC = toVC {
+            let targetVC : JPFloatingWindowProtocol = isPush == true ? (toVC as! JPFloatingWindowProtocol) : (fromVC as! JPFloatingWindowProtocol)
             if isFinish == true {
-                shrinkFwVC.jp_navigationController(navCtr, animationEndedFor: isPush, from: fromVC, to: toVC)
+                targetVC.jp_navigationController(navCtr, animationEndedFor: isPush, from: fromVC, to: toVC)
             } else {
-                shrinkFwVC.jp_navigationController(navCtr, animationCanceledFor: isPush, from: fromVC, to: toVC)
+                targetVC.jp_navigationController(navCtr, animationCanceledFor: isPush, from: fromVC, to: toVC)
             }
         }
         

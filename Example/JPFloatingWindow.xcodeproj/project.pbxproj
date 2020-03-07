@@ -273,7 +273,7 @@
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
-						DevelopmentTeam = AH737FZCJM;
+						DevelopmentTeam = FH4WHYK8ZQ;
 						LastSwiftMigration = 0900;
 					};
 					607FACE41AFB9204008FA782 = {
@@ -561,7 +561,7 @@
 			baseConfigurationReference = E1F2CC929ECAC914784C91D3 /* Pods-JPFloatingWindow_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = AH737FZCJM;
+				DEVELOPMENT_TEAM = FH4WHYK8ZQ;
 				INFOPLIST_FILE = JPFloatingWindow/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -578,7 +578,7 @@
 			baseConfigurationReference = DB8078A7986F34BE7F21A857 /* Pods-JPFloatingWindow_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = AH737FZCJM;
+				DEVELOPMENT_TEAM = FH4WHYK8ZQ;
 				INFOPLIST_FILE = JPFloatingWindow/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

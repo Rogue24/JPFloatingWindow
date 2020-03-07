@@ -1,6 +1,6 @@
 //
 //  JPFloatingDecideView.swift
-//  JPPresentationLayerDemo_Example
+//  JPFloatingWindow
 //
 //  Created by 周健平 on 2020/3/3.
 //  Copyright © 2020 CocoaPods. All rights reserved.

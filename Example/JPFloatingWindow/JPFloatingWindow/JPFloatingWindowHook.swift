@@ -1,6 +1,6 @@
 //
 //  JPFloatingWindowHook.swift
-//  JPPresentationLayerDemo_Example
+//  JPFloatingWindow
 //
 //  Created by 周健平 on 2020/3/1.
 //  Copyright © 2020 CocoaPods. All rights reserved.
@@ -51,79 +51,115 @@ extension UINavigationController {
         jp_swizzlingForClass(originalSelector: Selector(("_updateInteractiveTransition:")), swizzledSelector: #selector(jp_updateInteractiveTransition(percent:)))
         jp_swizzlingForClass(originalSelector: Selector(("_finishInteractiveTransition:transitionContext:")), swizzledSelector: #selector(jp_finishInteractiveTransition(percent:transitionContext:)))
         jp_swizzlingForClass(originalSelector: Selector(("_cancelInteractiveTransition:transitionContext:")), swizzledSelector: #selector(jp_cancelInteractiveTransition(percent:transitionContext:)))
+        jp_swizzlingForClass(originalSelector: Selector(("didShowViewController:animated:")), swizzledSelector: #selector(jp_didShowViewController(_:animated:)))
     }()
     
+    // pushViewController
     @objc fileprivate func jp_pushViewController(_ viewController: UIViewController, animated: Bool) {
         // 判断有没遵守协议，并且允不允许浮窗
-        if let pushVC = viewController as? JPFloatingWindowProtocol, pushVC.jp_isFloatingEnabled == true {
-            JPFwAnimator.isPush = true
+        if let pushVC = viewController as? JPFloatingWindowProtocol {
             
-            if JPFwAnimator.spreadFw == nil {
-                JPFwAnimator.shrinkFwVC = pushVC
+            let animator = JPFwAnimator
+            animator.isPush = true
+            animator.navCtr = self
+            animator.toVC = pushVC
+            if let fromVC = self.topViewController {
+                animator.fromVC = fromVC
+                pushVC.jp_navigationController(self, animationWillBeginFor: true, from: fromVC, to: pushVC)
             }
             
-            self.delegate = JPFwAnimator
+            guard pushVC.jp_isFloatingEnabled == true else {
+                jp_pushViewController(viewController, animated: animated)
+                return
+            }
+            
+            if animator.spreadFw == nil {
+                animator.shrinkFwVC = pushVC
+            } else {
+                // 成为代理，自定义pop动画，为了让底下那层view固定住，不要有动画
+                self.delegate = animator
+            }
+            
         }
         jp_pushViewController(viewController, animated: animated)
     }
     
+    // popViewController
     @objc fileprivate func jp_popViewController(animated: Bool) -> UIViewController? {
-        // 判断有没遵守协议，并且允不允许浮窗
-        if let popVC = self.topViewController as? JPFloatingWindowProtocol, popVC.jp_isFloatingEnabled == true {
-            JPFwAnimator.isPush = false
+        if let popVC = self.topViewController as? JPFloatingWindowProtocol {
             
-            JPFwAnimator.shrinkFwVC = popVC
+            let animator = JPFwAnimator
+            animator.isPush = false
+            animator.navCtr = self
+            animator.fromVC = popVC
+            if self.viewControllers.count > 1, let popVcIndex = self.viewControllers.firstIndex(of: popVC) {
+                let toVC : UIViewController = self.viewControllers[(popVcIndex - 1)]
+                animator.toVC = toVC
+                popVC.jp_navigationController(self, animationWillBeginFor: false, from: popVC, to: toVC)
+            }
             
-            // 如果pop手势状态是begin，说明是手势返回，系统的pop手势返回不会触发代理方法，那就没必要成为代理了，手动执行
+            guard popVC.jp_isFloatingEnabled == true else {
+                return jp_popViewController(animated: animated)
+            }
+            
+            animator.shrinkFwVC = popVC
+            
+            // 如果pop手势状态是begin，说明是手势返回
+            // 系统的pop手势返回【不会触发代理方法】，所以没必要成为代理了
             if interactivePopGestureRecognizer?.state == .began {
-                // 把判断view加上去
+                // 把判定半圆加上去
                 view.addSubview(JPFwAnimator.decideView)
-                
-                JPFwAnimator.navCtr = self
-                JPFwAnimator.fromVC = popVC
-                if self.viewControllers.count > 1, let popVcIndex : Int = self.viewControllers.firstIndex(of: popVC) {
-                    let toVC : UIViewController = self.viewControllers[(popVcIndex - 1)]
-                    JPFwAnimator.toVC = toVC
-                    popVC.jp_navigationController(self, animationWillBeginFor: false, from: popVC, to: toVC)
-                }
             } else {
                 // 否则就是 自己触发/点击返回的，这种情况可以触发代理方法
-                // 这种情况就成为代理，自定义pop动画吧，不然导航栏瞬间变化会挺生硬的，只需要把toVC固定就OK，效果还阔以吧
+                // 成为代理，自定义pop动画，为了让底下那层view固定住，不要有动画
                 self.delegate = JPFwAnimator
             }
         }
         return jp_popViewController(animated: animated)
     }
     
+    // 手势控制的过程，percent：动画进度
     @objc fileprivate func jp_updateInteractiveTransition(percent: CGFloat) {
         jp_updateInteractiveTransition(percent: percent)
-        
         let animator = JPFwAnimator
         guard animator.shrinkFwVC != nil, animator.isPush == false else {
             return
         }
-        
         animator.decideView.showPersent = percent * 2 // 滑到一半就显示完整
         animator.decideView.touchPoint = interactivePopGestureRecognizer!.location(in: view)
     }
     
+    // 手势停止，确定完成动画，动画继续直到结束后的状态
     @objc fileprivate func jp_finishInteractiveTransition(percent: CGFloat, transitionContext: UIViewControllerContextTransitioning) {
         jp_finishInteractiveTransition(percent: percent, transitionContext: transitionContext)
-       
         let animator = JPFwAnimator
         guard animator.shrinkFwVC != nil, animator.isPush == false else {
             return
         }
-        animator.jp_navigationAnimationDone(isFinish: true, isInteractive: true, percent)
+        if animator.decideView.isTouching {
+            animator.jp_startShrinkFloatingWindowAnimation(percent: percent)
+        }
+        animator.decideView.decideDoneAnimation()
     }
     
+    // 手势停止，确定取消动画，动画往返回到开始前的状态
     @objc fileprivate func jp_cancelInteractiveTransition(percent: CGFloat, transitionContext: UIViewControllerContextTransitioning) {
         jp_cancelInteractiveTransition(percent: percent, transitionContext: transitionContext)
-        
         let animator = JPFwAnimator
         guard animator.shrinkFwVC != nil, animator.isPush == false else {
             return
         }
-        animator.jp_navigationAnimationDone(isFinish: false, isInteractive: true)
+        // 隐藏判定半圆
+        animator.decideView.decideDoneAnimation()
+        // 系统的pop手势返回取消不会走didShowViewController方法，得手动调用转场结束方法
+        animator.jp_navigationAnimationDone(isFinish: false)
+    }
+    
+    // 转场完成后会走这个方法，转场取消（如cancelInteractiveTransition）则不会
+    @objc func jp_didShowViewController(_ viewController: UIViewController, animated: Bool) {
+        jp_didShowViewController(viewController, animated: animated)
+        if let toVC = JPFwAnimator.toVC {
+            JPFwAnimator.jp_navigationAnimationDone(isFinish: toVC == viewController)
+        }
     }
 }

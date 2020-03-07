@@ -63,6 +63,7 @@ extension UINavigationController {
             animator.isPush = true
             animator.navCtr = self
             animator.toVC = pushVC
+            
             if let fromVC = self.topViewController {
                 animator.fromVC = fromVC
                 pushVC.jp_navigationController(self, animationWillBeginFor: true, from: fromVC, to: pushVC)
@@ -92,6 +93,7 @@ extension UINavigationController {
             animator.isPush = false
             animator.navCtr = self
             animator.fromVC = popVC
+            
             if self.viewControllers.count > 1, let popVcIndex = self.viewControllers.firstIndex(of: popVC) {
                 let toVC : UIViewController = self.viewControllers[(popVcIndex - 1)]
                 animator.toVC = toVC
@@ -108,11 +110,11 @@ extension UINavigationController {
             // 系统的pop手势返回【不会触发代理方法】，所以没必要成为代理了
             if interactivePopGestureRecognizer?.state == .began {
                 // 把判定半圆加上去
-                view.addSubview(JPFwAnimator.decideView)
+                view.addSubview(animator.decideView)
             } else {
                 // 否则就是 自己触发/点击返回的，这种情况可以触发代理方法
                 // 成为代理，自定义pop动画，为了让底下那层view固定住，不要有动画
-                self.delegate = JPFwAnimator
+                self.delegate = animator
             }
         }
         return jp_popViewController(animated: animated)

@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'JPFloatingWindow_Example' do
+  pod 'JPFloatingWindow', :path => '../'
+
+  target 'JPFloatingWindow_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end

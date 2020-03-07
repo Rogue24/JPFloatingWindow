@@ -1,5 +1,6 @@
 # JPFloatingWindow
 
+![简书链接](https://www.jianshu.com/p/3f29f1e5bb98)
 ![gif for example](https://github.com/Rogue24/JPFloatingWindow/raw/master/GIF/gif_example.gif)
 
 ## Realize the effect of floating window generated in the sliding return process of Wechat App.

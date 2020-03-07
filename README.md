@@ -1,29 +1,11 @@
 # JPFloatingWindow
 
-[![CI Status](https://img.shields.io/travis/zhoujianping24@hotmail.com/JPFloatingWindow.svg?style=flat)](https://travis-ci.org/zhoujianping24@hotmail.com/JPFloatingWindow)
-[![Version](https://img.shields.io/cocoapods/v/JPFloatingWindow.svg?style=flat)](https://cocoapods.org/pods/JPFloatingWindow)
-[![License](https://img.shields.io/cocoapods/l/JPFloatingWindow.svg?style=flat)](https://cocoapods.org/pods/JPFloatingWindow)
-[![Platform](https://img.shields.io/cocoapods/p/JPFloatingWindow.svg?style=flat)](https://cocoapods.org/pods/JPFloatingWindow)
+![gif for example](https://github.com/Rogue24/JPFloatingWindow/raw/master/GIF/gif_example.gif)
 
-## Example
+## Realize the effect of floating window generated in the sliding return process of Wechat App.
 
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
-
-## Requirements
-
-## Installation
-
-JPFloatingWindow is available through [CocoaPods](https://cocoapods.org). To install
-it, simply add the following line to your Podfile:
-
-```ruby
-pod 'JPFloatingWindow'
-```
+PS: JPFloatingWindow is not the final version at present, it is just the implementation, and it needs to be optimized.
 
 ## Author
 
-zhoujianping24@hotmail.com, zhoujianping24@hotmail.com
-
-## License
-
-JPFloatingWindow is available under the MIT license. See the LICENSE file for more info.
+Email: zhoujianping24@hotmail.com, Blog: https://www.jianshu.com/u/2edfbadd451c

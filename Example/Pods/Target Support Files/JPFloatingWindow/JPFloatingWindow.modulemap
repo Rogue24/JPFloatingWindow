@@ -1,0 +1,6 @@
+framework module JPFloatingWindow {
+  umbrella header "JPFloatingWindow-umbrella.h"
+
+  export *
+  module * { export * }
+}

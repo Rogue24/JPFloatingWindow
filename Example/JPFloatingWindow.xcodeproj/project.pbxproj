@@ -8,6 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		19B00EFECA999D90399561FE /* Pods_JPFloatingWindow_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F30BB471EE33946FE71B5A7 /* Pods_JPFloatingWindow_Tests.framework */; };
+		1A71E60C2413D61C0018B9F5 /* JPFloatingWindowManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A71E6032413D61C0018B9F5 /* JPFloatingWindowManager.swift */; };
+		1A71E60D2413D61C0018B9F5 /* JPFloatingWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A71E6042413D61C0018B9F5 /* JPFloatingWindow.swift */; };
+		1A71E60E2413D61C0018B9F5 /* JPFloatingWindowHook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A71E6052413D61C0018B9F5 /* JPFloatingWindowHook.swift */; };
+		1A71E60F2413D61C0018B9F5 /* JPFloatingWindowProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A71E6062413D61C0018B9F5 /* JPFloatingWindowProtocol.swift */; };
+		1A71E6132413D61C0018B9F5 /* JPFloatingDecideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A71E60A2413D61C0018B9F5 /* JPFloatingDecideView.swift */; };
+		1A71E6142413D61C0018B9F5 /* JPFloatingWindowAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A71E60B2413D61C0018B9F5 /* JPFloatingWindowAnimator.swift */; };
+		1A71E61A2413D63C0018B9F5 /* UIScrollView+JPExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A71E6162413D63C0018B9F5 /* UIScrollView+JPExtension.swift */; };
+		1A71E61B2413D63C0018B9F5 /* UIViewController+JPExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A71E6172413D63C0018B9F5 /* UIViewController+JPExtension.swift */; };
+		1A71E61C2413D63C0018B9F5 /* UIView+JPExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A71E6182413D63C0018B9F5 /* UIView+JPExtension.swift */; };
+		1A71E61D2413D63C0018B9F5 /* UIColor+JPExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A71E6192413D63C0018B9F5 /* UIColor+JPExtension.swift */; };
+		1A71E61F2413D6530018B9F5 /* jp_background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1A71E61E2413D6530018B9F5 /* jp_background.jpg */; };
+		1A71E6212413D6BB0018B9F5 /* JPNavigationBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A71E6202413D6BB0018B9F5 /* JPNavigationBackgroundView.swift */; };
+		1A71E6232413D78C0018B9F5 /* JPFloatingWindowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A71E6222413D78C0018B9F5 /* JPFloatingWindowViewController.swift */; };
+		1A71E6252413D7910018B9F5 /* JPWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A71E6242413D7910018B9F5 /* JPWebViewController.swift */; };
+		1A71E6272413D7B40018B9F5 /* JPFloatingWindowCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A71E6262413D7B40018B9F5 /* JPFloatingWindowCell.swift */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
@@ -28,10 +43,25 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1FB9F2DEDF9624EF3D2C4DAC /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		1A71E6032413D61C0018B9F5 /* JPFloatingWindowManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JPFloatingWindowManager.swift; sourceTree = "<group>"; };
+		1A71E6042413D61C0018B9F5 /* JPFloatingWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JPFloatingWindow.swift; sourceTree = "<group>"; };
+		1A71E6052413D61C0018B9F5 /* JPFloatingWindowHook.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JPFloatingWindowHook.swift; sourceTree = "<group>"; };
+		1A71E6062413D61C0018B9F5 /* JPFloatingWindowProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JPFloatingWindowProtocol.swift; sourceTree = "<group>"; };
+		1A71E60A2413D61C0018B9F5 /* JPFloatingDecideView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JPFloatingDecideView.swift; sourceTree = "<group>"; };
+		1A71E60B2413D61C0018B9F5 /* JPFloatingWindowAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JPFloatingWindowAnimator.swift; sourceTree = "<group>"; };
+		1A71E6162413D63C0018B9F5 /* UIScrollView+JPExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIScrollView+JPExtension.swift"; sourceTree = "<group>"; };
+		1A71E6172413D63C0018B9F5 /* UIViewController+JPExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+JPExtension.swift"; sourceTree = "<group>"; };
+		1A71E6182413D63C0018B9F5 /* UIView+JPExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+JPExtension.swift"; sourceTree = "<group>"; };
+		1A71E6192413D63C0018B9F5 /* UIColor+JPExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+JPExtension.swift"; sourceTree = "<group>"; };
+		1A71E61E2413D6530018B9F5 /* jp_background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = jp_background.jpg; sourceTree = "<group>"; };
+		1A71E6202413D6BB0018B9F5 /* JPNavigationBackgroundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JPNavigationBackgroundView.swift; sourceTree = "<group>"; };
+		1A71E6222413D78C0018B9F5 /* JPFloatingWindowViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JPFloatingWindowViewController.swift; sourceTree = "<group>"; };
+		1A71E6242413D7910018B9F5 /* JPWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JPWebViewController.swift; sourceTree = "<group>"; };
+		1A71E6262413D7B40018B9F5 /* JPFloatingWindowCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JPFloatingWindowCell.swift; sourceTree = "<group>"; };
+		1FB9F2DEDF9624EF3D2C4DAC /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		2F30BB471EE33946FE71B5A7 /* Pods_JPFloatingWindow_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JPFloatingWindow_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		504056F1EBFDA9207195BEE9 /* Pods_JPFloatingWindow_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JPFloatingWindow_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		5BD207DBE90780069F5DFAB5 /* JPFloatingWindow.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = JPFloatingWindow.podspec; path = ../JPFloatingWindow.podspec; sourceTree = "<group>"; };
+		5BD207DBE90780069F5DFAB5 /* JPFloatingWindow.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = JPFloatingWindow.podspec; path = ../JPFloatingWindow.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		607FACD01AFB9204008FA782 /* JPFloatingWindow_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JPFloatingWindow_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -42,7 +72,7 @@
 		607FACE51AFB9204008FA782 /* JPFloatingWindow_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JPFloatingWindow_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
-		60D668AB87E84C34C71343DC /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		60D668AB87E84C34C71343DC /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		792D915BEEE797043C58C450 /* Pods-JPFloatingWindow_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JPFloatingWindow_Tests.release.xcconfig"; path = "Target Support Files/Pods-JPFloatingWindow_Tests/Pods-JPFloatingWindow_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		B9A9A0546B8F1A4C7521D3DC /* Pods-JPFloatingWindow_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JPFloatingWindow_Tests.debug.xcconfig"; path = "Target Support Files/Pods-JPFloatingWindow_Tests/Pods-JPFloatingWindow_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		DB8078A7986F34BE7F21A857 /* Pods-JPFloatingWindow_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JPFloatingWindow_Example.release.xcconfig"; path = "Target Support Files/Pods-JPFloatingWindow_Example/Pods-JPFloatingWindow_Example.release.xcconfig"; sourceTree = "<group>"; };
@@ -77,8 +107,31 @@
 				B9A9A0546B8F1A4C7521D3DC /* Pods-JPFloatingWindow_Tests.debug.xcconfig */,
 				792D915BEEE797043C58C450 /* Pods-JPFloatingWindow_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		1A71E6022413D61C0018B9F5 /* JPFloatingWindow */ = {
+			isa = PBXGroup;
+			children = (
+				1A71E6052413D61C0018B9F5 /* JPFloatingWindowHook.swift */,
+				1A71E6062413D61C0018B9F5 /* JPFloatingWindowProtocol.swift */,
+				1A71E6032413D61C0018B9F5 /* JPFloatingWindowManager.swift */,
+				1A71E60B2413D61C0018B9F5 /* JPFloatingWindowAnimator.swift */,
+				1A71E60A2413D61C0018B9F5 /* JPFloatingDecideView.swift */,
+				1A71E6042413D61C0018B9F5 /* JPFloatingWindow.swift */,
+			);
+			path = JPFloatingWindow;
+			sourceTree = "<group>";
+		};
+		1A71E6152413D63C0018B9F5 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				1A71E6182413D63C0018B9F5 /* UIView+JPExtension.swift */,
+				1A71E6192413D63C0018B9F5 /* UIColor+JPExtension.swift */,
+				1A71E6172413D63C0018B9F5 /* UIViewController+JPExtension.swift */,
+				1A71E6162413D63C0018B9F5 /* UIScrollView+JPExtension.swift */,
+			);
+			path = Category;
 			sourceTree = "<group>";
 		};
 		596FEE93984A72CBA358F5D3 /* Frameworks */ = {
@@ -114,8 +167,15 @@
 		607FACD21AFB9204008FA782 /* Example for JPFloatingWindow */ = {
 			isa = PBXGroup;
 			children = (
+				1A71E6022413D61C0018B9F5 /* JPFloatingWindow */,
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
+				1A71E6202413D6BB0018B9F5 /* JPNavigationBackgroundView.swift */,
+				1A71E6222413D78C0018B9F5 /* JPFloatingWindowViewController.swift */,
+				1A71E6262413D7B40018B9F5 /* JPFloatingWindowCell.swift */,
+				1A71E6242413D7910018B9F5 /* JPWebViewController.swift */,
+				1A71E61E2413D6530018B9F5 /* jp_background.jpg */,
+				1A71E6152413D63C0018B9F5 /* Category */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
@@ -208,15 +268,17 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 0830;
+				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = CocoaPods;
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = AH737FZCJM;
 						LastSwiftMigration = 0900;
 					};
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = AH737FZCJM;
 						LastSwiftMigration = 0900;
 						TestTargetID = 607FACCF1AFB9204008FA782;
 					};
@@ -224,7 +286,7 @@
 			};
 			buildConfigurationList = 607FACCB1AFB9204008FA782 /* Build configuration list for PBXProject "JPFloatingWindow" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
@@ -247,6 +309,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
+				1A71E61F2413D6530018B9F5 /* jp_background.jpg in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
 			);
@@ -331,8 +394,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A71E6212413D6BB0018B9F5 /* JPNavigationBackgroundView.swift in Sources */,
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
+				1A71E60C2413D61C0018B9F5 /* JPFloatingWindowManager.swift in Sources */,
+				1A71E60E2413D61C0018B9F5 /* JPFloatingWindowHook.swift in Sources */,
+				1A71E60D2413D61C0018B9F5 /* JPFloatingWindow.swift in Sources */,
+				1A71E61D2413D63C0018B9F5 /* UIColor+JPExtension.swift in Sources */,
+				1A71E61C2413D63C0018B9F5 /* UIView+JPExtension.swift in Sources */,
+				1A71E6132413D61C0018B9F5 /* JPFloatingDecideView.swift in Sources */,
+				1A71E6232413D78C0018B9F5 /* JPFloatingWindowViewController.swift in Sources */,
+				1A71E6252413D7910018B9F5 /* JPWebViewController.swift in Sources */,
+				1A71E60F2413D61C0018B9F5 /* JPFloatingWindowProtocol.swift in Sources */,
+				1A71E6142413D61C0018B9F5 /* JPFloatingWindowAnimator.swift in Sources */,
+				1A71E61A2413D63C0018B9F5 /* UIScrollView+JPExtension.swift in Sources */,
+				1A71E6272413D7B40018B9F5 /* JPFloatingWindowCell.swift in Sources */,
+				1A71E61B2413D63C0018B9F5 /* UIViewController+JPExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -378,6 +455,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -386,12 +464,14 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -419,7 +499,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -431,6 +511,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -439,12 +520,14 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -465,7 +548,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -478,7 +561,9 @@
 			baseConfigurationReference = E1F2CC929ECAC914784C91D3 /* Pods-JPFloatingWindow_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = AH737FZCJM;
 				INFOPLIST_FILE = JPFloatingWindow/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
@@ -493,7 +578,9 @@
 			baseConfigurationReference = DB8078A7986F34BE7F21A857 /* Pods-JPFloatingWindow_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = AH737FZCJM;
 				INFOPLIST_FILE = JPFloatingWindow/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
@@ -507,6 +594,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B9A9A0546B8F1A4C7521D3DC /* Pods-JPFloatingWindow_Tests.debug.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = AH737FZCJM;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -529,6 +617,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 792D915BEEE797043C58C450 /* Pods-JPFloatingWindow_Tests.release.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = AH737FZCJM;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 					"$(inherited)",

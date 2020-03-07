@@ -1,0 +1,16 @@
+PODS:
+  - JPFloatingWindow (0.1.0)
+
+DEPENDENCIES:
+  - JPFloatingWindow (from `../`)
+
+EXTERNAL SOURCES:
+  JPFloatingWindow:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  JPFloatingWindow: 1e5a90ed5c168c47a0c0c72fb0c8e8aa22672e85
+
+PODFILE CHECKSUM: cd370e7e69d6d482de39bf35203fe8f465db3376
+
+COCOAPODS: 1.7.1

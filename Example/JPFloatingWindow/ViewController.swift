@@ -12,7 +12,18 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        title = "首页"
+        
+        if #available(iOS 13.0, *) {
+            let navBar = UIVisualEffectView(effect: UIBlurEffect(style: .systemMaterial))
+            navBar.frame = CGRect(x: 0, y: 0, width: jp_portraitScreenWidth_, height: jp_navTopMargin_)
+            navigationController?.navigationBar.jp_setupCustomNavigationBgView(customBgView: navBar)
+        } else {
+            let navBar = UIVisualEffectView(effect: UIBlurEffect(style: .extraLight))
+            navBar.frame = CGRect(x: 0, y: 0, width: jp_portraitScreenWidth_, height: jp_navTopMargin_)
+            navigationController?.navigationBar.jp_setupCustomNavigationBgView(customBgView: navBar)
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -20,5 +31,8 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func goPlay(_ sender: Any) {
+        navigationController?.pushViewController(JPFloatingWindowViewController(), animated: true)
+    }
 }
 

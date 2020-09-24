@@ -9,7 +9,7 @@
 import UIKit
 
 extension UINavigationBar {
-    private static var JPNavBgViewKey = "\0"
+    private static var JPNavBgViewKey: Character = "\0"
     var jp_navBgView : UIView? {
         get {
             return objc_getAssociatedObject(self, &(UINavigationBar.JPNavBgViewKey)) as? UIView

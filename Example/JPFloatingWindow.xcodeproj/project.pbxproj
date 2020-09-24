@@ -18,11 +18,11 @@
 		1A71E61B2413D63C0018B9F5 /* UIViewController+JPExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A71E6172413D63C0018B9F5 /* UIViewController+JPExtension.swift */; };
 		1A71E61C2413D63C0018B9F5 /* UIView+JPExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A71E6182413D63C0018B9F5 /* UIView+JPExtension.swift */; };
 		1A71E61D2413D63C0018B9F5 /* UIColor+JPExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A71E6192413D63C0018B9F5 /* UIColor+JPExtension.swift */; };
-		1A71E61F2413D6530018B9F5 /* jp_background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1A71E61E2413D6530018B9F5 /* jp_background.jpg */; };
-		1A71E6212413D6BB0018B9F5 /* JPNavigationBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A71E6202413D6BB0018B9F5 /* JPNavigationBackgroundView.swift */; };
-		1A71E6232413D78C0018B9F5 /* JPFloatingWindowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A71E6222413D78C0018B9F5 /* JPFloatingWindowViewController.swift */; };
-		1A71E6252413D7910018B9F5 /* JPWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A71E6242413D7910018B9F5 /* JPWebViewController.swift */; };
-		1A71E6272413D7B40018B9F5 /* JPFloatingWindowCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A71E6262413D7B40018B9F5 /* JPFloatingWindowCell.swift */; };
+		1A873E1C251C731000AE2E3E /* JPNavigationBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A873E17251C731000AE2E3E /* JPNavigationBackgroundView.swift */; };
+		1A873E24251C735900AE2E3E /* WebCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A873E21251C735900AE2E3E /* WebCell.swift */; };
+		1A873E25251C735900AE2E3E /* WebListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A873E22251C735900AE2E3E /* WebListViewController.swift */; };
+		1A873E26251C735900AE2E3E /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A873E23251C735900AE2E3E /* WebViewController.swift */; };
+		1A873E2A251C736100AE2E3E /* jp_background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1A873E29251C736100AE2E3E /* jp_background.jpg */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
@@ -53,11 +53,11 @@
 		1A71E6172413D63C0018B9F5 /* UIViewController+JPExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+JPExtension.swift"; sourceTree = "<group>"; };
 		1A71E6182413D63C0018B9F5 /* UIView+JPExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+JPExtension.swift"; sourceTree = "<group>"; };
 		1A71E6192413D63C0018B9F5 /* UIColor+JPExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+JPExtension.swift"; sourceTree = "<group>"; };
-		1A71E61E2413D6530018B9F5 /* jp_background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = jp_background.jpg; sourceTree = "<group>"; };
-		1A71E6202413D6BB0018B9F5 /* JPNavigationBackgroundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JPNavigationBackgroundView.swift; sourceTree = "<group>"; };
-		1A71E6222413D78C0018B9F5 /* JPFloatingWindowViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JPFloatingWindowViewController.swift; sourceTree = "<group>"; };
-		1A71E6242413D7910018B9F5 /* JPWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JPWebViewController.swift; sourceTree = "<group>"; };
-		1A71E6262413D7B40018B9F5 /* JPFloatingWindowCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JPFloatingWindowCell.swift; sourceTree = "<group>"; };
+		1A873E17251C731000AE2E3E /* JPNavigationBackgroundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JPNavigationBackgroundView.swift; sourceTree = "<group>"; };
+		1A873E21251C735900AE2E3E /* WebCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebCell.swift; sourceTree = "<group>"; };
+		1A873E22251C735900AE2E3E /* WebListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebListViewController.swift; sourceTree = "<group>"; };
+		1A873E23251C735900AE2E3E /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		1A873E29251C736100AE2E3E /* jp_background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = jp_background.jpg; sourceTree = "<group>"; };
 		1FB9F2DEDF9624EF3D2C4DAC /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		2F30BB471EE33946FE71B5A7 /* Pods_JPFloatingWindow_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JPFloatingWindow_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		504056F1EBFDA9207195BEE9 /* Pods_JPFloatingWindow_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JPFloatingWindow_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -134,6 +134,25 @@
 			path = Category;
 			sourceTree = "<group>";
 		};
+		1A873E16251C731000AE2E3E /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				1A873E17251C731000AE2E3E /* JPNavigationBackgroundView.swift */,
+				1A873E29251C736100AE2E3E /* jp_background.jpg */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		1A873E20251C735900AE2E3E /* WebList */ = {
+			isa = PBXGroup;
+			children = (
+				1A873E22251C735900AE2E3E /* WebListViewController.swift */,
+				1A873E21251C735900AE2E3E /* WebCell.swift */,
+				1A873E23251C735900AE2E3E /* WebViewController.swift */,
+			);
+			path = WebList;
+			sourceTree = "<group>";
+		};
 		596FEE93984A72CBA358F5D3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -167,14 +186,11 @@
 		607FACD21AFB9204008FA782 /* Example for JPFloatingWindow */ = {
 			isa = PBXGroup;
 			children = (
-				1A71E6022413D61C0018B9F5 /* JPFloatingWindow */,
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
-				1A71E6202413D6BB0018B9F5 /* JPNavigationBackgroundView.swift */,
-				1A71E6222413D78C0018B9F5 /* JPFloatingWindowViewController.swift */,
-				1A71E6262413D7B40018B9F5 /* JPFloatingWindowCell.swift */,
-				1A71E6242413D7910018B9F5 /* JPWebViewController.swift */,
-				1A71E61E2413D6530018B9F5 /* jp_background.jpg */,
+				1A71E6022413D61C0018B9F5 /* JPFloatingWindow */,
+				1A873E20251C735900AE2E3E /* WebList */,
+				1A873E16251C731000AE2E3E /* Common */,
 				1A71E6152413D63C0018B9F5 /* Category */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
@@ -273,12 +289,12 @@
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
-						DevelopmentTeam = AH737FZCJM;
+						DevelopmentTeam = FH4WHYK8ZQ;
 						LastSwiftMigration = 0900;
 					};
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
-						DevelopmentTeam = AH737FZCJM;
+						DevelopmentTeam = FH4WHYK8ZQ;
 						LastSwiftMigration = 0900;
 						TestTargetID = 607FACCF1AFB9204008FA782;
 					};
@@ -309,9 +325,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
-				1A71E61F2413D6530018B9F5 /* jp_background.jpg in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
+				1A873E2A251C736100AE2E3E /* jp_background.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -394,21 +410,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1A71E6212413D6BB0018B9F5 /* JPNavigationBackgroundView.swift in Sources */,
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
+				1A873E26251C735900AE2E3E /* WebViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 				1A71E60C2413D61C0018B9F5 /* JPFloatingWindowManager.swift in Sources */,
 				1A71E60E2413D61C0018B9F5 /* JPFloatingWindowHook.swift in Sources */,
 				1A71E60D2413D61C0018B9F5 /* JPFloatingWindow.swift in Sources */,
+				1A873E1C251C731000AE2E3E /* JPNavigationBackgroundView.swift in Sources */,
 				1A71E61D2413D63C0018B9F5 /* UIColor+JPExtension.swift in Sources */,
 				1A71E61C2413D63C0018B9F5 /* UIView+JPExtension.swift in Sources */,
+				1A873E25251C735900AE2E3E /* WebListViewController.swift in Sources */,
+				1A873E24251C735900AE2E3E /* WebCell.swift in Sources */,
 				1A71E6132413D61C0018B9F5 /* JPFloatingDecideView.swift in Sources */,
-				1A71E6232413D78C0018B9F5 /* JPFloatingWindowViewController.swift in Sources */,
-				1A71E6252413D7910018B9F5 /* JPWebViewController.swift in Sources */,
 				1A71E60F2413D61C0018B9F5 /* JPFloatingWindowProtocol.swift in Sources */,
 				1A71E6142413D61C0018B9F5 /* JPFloatingWindowAnimator.swift in Sources */,
 				1A71E61A2413D63C0018B9F5 /* UIScrollView+JPExtension.swift in Sources */,
-				1A71E6272413D7B40018B9F5 /* JPFloatingWindowCell.swift in Sources */,
 				1A71E61B2413D63C0018B9F5 /* UIViewController+JPExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -561,7 +577,7 @@
 			baseConfigurationReference = E1F2CC929ECAC914784C91D3 /* Pods-JPFloatingWindow_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = AH737FZCJM;
+				DEVELOPMENT_TEAM = FH4WHYK8ZQ;
 				INFOPLIST_FILE = JPFloatingWindow/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -578,7 +594,7 @@
 			baseConfigurationReference = DB8078A7986F34BE7F21A857 /* Pods-JPFloatingWindow_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = AH737FZCJM;
+				DEVELOPMENT_TEAM = FH4WHYK8ZQ;
 				INFOPLIST_FILE = JPFloatingWindow/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -594,7 +610,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B9A9A0546B8F1A4C7521D3DC /* Pods-JPFloatingWindow_Tests.debug.xcconfig */;
 			buildSettings = {
-				DEVELOPMENT_TEAM = AH737FZCJM;
+				DEVELOPMENT_TEAM = FH4WHYK8ZQ;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -617,7 +633,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 792D915BEEE797043C58C450 /* Pods-JPFloatingWindow_Tests.release.xcconfig */;
 			buildSettings = {
-				DEVELOPMENT_TEAM = AH737FZCJM;
+				DEVELOPMENT_TEAM = FH4WHYK8ZQ;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 					"$(inherited)",

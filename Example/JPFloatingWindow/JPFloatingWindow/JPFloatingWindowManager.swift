@@ -22,8 +22,8 @@ class JPFloatingWindowManager {
     var floatingWindowsHasDidChanged : ((_ isInsert: Bool, _ index: Int) -> Void)?
     
     init() {
-        UIPercentDrivenInteractiveTransition.jp_takeOnceTimeFunc()
-        UINavigationController.jp_takeOnceTimeFunc()
+        UIPercentDrivenInteractiveTransition.onceHook
+        UINavigationController.onceHook
     }
     
 }

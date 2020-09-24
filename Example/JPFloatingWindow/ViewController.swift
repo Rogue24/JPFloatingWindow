@@ -26,13 +26,8 @@ class ViewController: UIViewController {
         }
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
     @IBAction func goPlay(_ sender: Any) {
-        navigationController?.pushViewController(JPFloatingWindowViewController(), animated: true)
+        navigationController?.pushViewController(WebListViewController(), animated: true)
     }
 }
 

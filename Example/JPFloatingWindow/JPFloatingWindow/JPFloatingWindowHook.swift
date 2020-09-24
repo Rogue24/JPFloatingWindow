@@ -8,23 +8,22 @@
 
 import UIKit
 
-extension NSObject {
-    fileprivate static func jp_swizzlingForClass(originalSelector: Selector, swizzledSelector: Selector) {
-        let originalMethod = class_getInstanceMethod(self, originalSelector)
-        let swizzledMethod = class_getInstanceMethod(self, swizzledSelector)
-        guard originalMethod != nil, swizzledMethod != nil else {
+protocol JPHookProtocol: NSObject {
+    static var onceHook: Void { get }
+}
+extension JPHookProtocol {
+    fileprivate static func swizzlingInstanceMethods(_ originalSelector: Selector, _ swizzledSelector: Selector) {
+        guard let originalMethod = class_getInstanceMethod(self, originalSelector),
+              let swizzledMethod = class_getInstanceMethod(self, swizzledSelector) else {
             return
         }
-        method_exchangeImplementations(originalMethod!, swizzledMethod!)
+        method_exchangeImplementations(originalMethod, swizzledMethod)
     }
 }
 
-extension UIPercentDrivenInteractiveTransition {
-    static func jp_takeOnceTimeFunc() {
-        jp_takeOnceTime
-    }
-    private static let jp_takeOnceTime: Void = {
-        jp_swizzlingForClass(originalSelector: #selector(cancel), swizzledSelector: #selector(jp_cancel))
+extension UIPercentDrivenInteractiveTransition: JPHookProtocol {
+    internal static let onceHook: Void = {
+        swizzlingInstanceMethods(#selector(cancel), #selector(jp_cancel))
     }()
     
     // 有时候已经滑到判定区域里面，但还是会取消pop，这是系统自身的判断（例如手指滑到了iPhoneX的下巴），这里hook来自己判断
@@ -41,24 +40,26 @@ extension UIPercentDrivenInteractiveTransition {
     }
 }
 
-extension UINavigationController {
-    static func jp_takeOnceTimeFunc() {
-        jp_takeOnceTime
-    }
-    private static let jp_takeOnceTime: Void = {
-        jp_swizzlingForClass(originalSelector: #selector(pushViewController(_:animated:)), swizzledSelector: #selector(jp_pushViewController(_:animated:)))
-        jp_swizzlingForClass(originalSelector: #selector(popViewController(animated:)), swizzledSelector: #selector(jp_popViewController(animated:)))
-        jp_swizzlingForClass(originalSelector: Selector(("_updateInteractiveTransition:")), swizzledSelector: #selector(jp_updateInteractiveTransition(percent:)))
-        jp_swizzlingForClass(originalSelector: Selector(("_finishInteractiveTransition:transitionContext:")), swizzledSelector: #selector(jp_finishInteractiveTransition(percent:transitionContext:)))
-        jp_swizzlingForClass(originalSelector: Selector(("_cancelInteractiveTransition:transitionContext:")), swizzledSelector: #selector(jp_cancelInteractiveTransition(percent:transitionContext:)))
-        jp_swizzlingForClass(originalSelector: Selector(("didShowViewController:animated:")), swizzledSelector: #selector(jp_didShowViewController(_:animated:)))
+extension UINavigationController: JPHookProtocol {
+    internal static let onceHook: Void = {
+        swizzlingInstanceMethods(#selector(pushViewController(_:animated:)),
+                                 #selector(jp_pushViewController(_:animated:)))
+        swizzlingInstanceMethods(#selector(popViewController(animated:)),
+                                 #selector(jp_popViewController(animated:)))
+        swizzlingInstanceMethods(Selector(("_updateInteractiveTransition:")),
+                                 #selector(jp_updateInteractiveTransition(percent:)))
+        swizzlingInstanceMethods(Selector(("_finishInteractiveTransition:transitionContext:")),
+                                 #selector(jp_finishInteractiveTransition(percent:transitionContext:)))
+        swizzlingInstanceMethods(Selector(("_cancelInteractiveTransition:transitionContext:")),
+                                 #selector(jp_cancelInteractiveTransition(percent:transitionContext:)))
+        swizzlingInstanceMethods(Selector(("didShowViewController:animated:")),
+                                 #selector(jp_didShowViewController(_:animated:)))
     }()
     
     // pushViewController
     @objc fileprivate func jp_pushViewController(_ viewController: UIViewController, animated: Bool) {
         // 判断有没遵守协议，并且允不允许浮窗
         if let pushVC = viewController as? JPFloatingWindowProtocol {
-            
             let animator = JPFwAnimator
             animator.isPush = true
             animator.navCtr = self
@@ -80,15 +81,14 @@ extension UINavigationController {
                 // 成为代理，自定义pop动画，为了让底下那层view固定住，不要有动画
                 self.delegate = animator
             }
-            
         }
+        
         jp_pushViewController(viewController, animated: animated)
     }
     
     // popViewController
     @objc fileprivate func jp_popViewController(animated: Bool) -> UIViewController? {
         if let popVC = self.topViewController as? JPFloatingWindowProtocol {
-            
             let animator = JPFwAnimator
             animator.isPush = false
             animator.navCtr = self
@@ -117,6 +117,7 @@ extension UINavigationController {
                 self.delegate = animator
             }
         }
+        
         return jp_popViewController(animated: animated)
     }
     

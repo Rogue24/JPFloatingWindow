@@ -1,5 +1,5 @@
 //
-//  JPWebViewController.swift
+//  WebViewController.swift
 //  JPFloatingWindow
 //
 //  Created by 周健平 on 2020/3/3.
@@ -9,7 +9,7 @@
 import UIKit
 import WebKit
 
-class JPWebViewController: UIViewController {
+class WebViewController: UIViewController {
     var jp_isFloatingEnabled: Bool
     
     var urlString : String? {
@@ -189,13 +189,13 @@ class JPWebViewController: UIViewController {
     }
     
     deinit {
-        print("JPWebViewController壮烈牺牲")
+        print("WebViewController壮烈牺牲")
         setupWebViewObserver(isRemove: true)
     }
 }
 
 // MARK:- UI布局
-extension JPWebViewController {
+extension WebViewController {
     fileprivate func setupUI() {
         title = "加载中..."
         view.backgroundColor = webView.backgroundColor
@@ -236,7 +236,7 @@ extension JPWebViewController {
 }
 
 // MARK:- KVO
-extension JPWebViewController {
+extension WebViewController {
     fileprivate func setupWebViewObserver(isRemove: Bool) {
         if (isRemove) {
             webView.removeObserver(self, forKeyPath: "title")
@@ -262,7 +262,7 @@ extension JPWebViewController {
 }
 
 // MARK:- 按钮事件
-extension JPWebViewController {
+extension WebViewController {
     @objc fileprivate func back() {
         if webView.canGoBack == true {
             webView.goBack()
@@ -291,7 +291,7 @@ extension JPWebViewController {
 }
 
 // MARK:- <WKNavigationDelegate>
-extension JPWebViewController : WKNavigationDelegate {
+extension WebViewController : WKNavigationDelegate {
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
         UIView.animate(withDuration: 0.8) {
             webView.alpha = 1
@@ -300,7 +300,7 @@ extension JPWebViewController : WKNavigationDelegate {
 }
 
 // MARK:- <JPFloatingWindowProtocol>
-extension JPWebViewController : JPFloatingWindowProtocol {
+extension WebViewController : JPFloatingWindowProtocol {
     
     func jp_navigationController(_ navCtr: UINavigationController, animationWillBeginFor isPush: Bool, from fromVC: UIViewController, to toVC: UIViewController) {
         guard let navBgView = navCtr.navigationBar.jp_navBgView else {

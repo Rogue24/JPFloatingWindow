@@ -113,7 +113,7 @@ extension JPFloatingWindow {
 //            self.frame = self.fwIcon.frame
             self.frame = self.boomIcon.frame
             self.center = self.floatingPoint
-            self.transform = CGAffineTransform(scaleX: 0.01, y: 0.01).concatenating(CGAffineTransform.identity)
+            self.transform = CGAffineTransform(scaleX: 0.01, y: 0.01)//.concatenating(CGAffineTransform.identity)
             
             self.mask = nil
             self.backgroundColor = UIColor.clear

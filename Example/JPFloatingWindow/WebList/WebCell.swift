@@ -8,9 +8,9 @@
 
 import UIKit
 
-let JPFloatingWindowCellID = "JPFloatingWindowCell"
+let WebCellID = "JPFloatingWindowCell"
 
-class JPFloatingWindowCell: UICollectionViewCell {
+class WebCell: UICollectionViewCell {
     let fwIcon : UIImageView = UIImageView(frame: CGRect(origin: CGPoint.zero, size: JPFloatingWindow.size))
 //    let fwLabel :
     

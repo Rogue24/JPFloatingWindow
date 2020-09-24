@@ -8,7 +8,7 @@
 
 import UIKit
 
-class JPFloatingWindowViewController: UIViewController {
+class WebListViewController: UIViewController {
     
     static let cellMargin = (jp_portraitScreenWidth_ - 4 * JPFloatingWindow.size.width) / 5.0
     
@@ -45,7 +45,7 @@ class JPFloatingWindowViewController: UIViewController {
         bgImgView.clipsToBounds = true
         view.addSubview(bgImgView)
         
-        let cellMargin = JPFloatingWindowViewController.cellMargin
+        let cellMargin = Self.cellMargin
         let flowLayout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
         flowLayout.itemSize = JPFloatingWindow.size
         flowLayout.minimumLineSpacing = cellMargin
@@ -56,35 +56,35 @@ class JPFloatingWindowViewController: UIViewController {
         collectionView.alwaysBounceVertical = true
         collectionView.backgroundColor = UIColor.clear
         collectionView.collectionViewLayout = flowLayout
-        collectionView.register(JPFloatingWindowCell.self, forCellWithReuseIdentifier: JPFloatingWindowCellID)
+        collectionView.register(WebCell.self, forCellWithReuseIdentifier: WebCellID)
         collectionView.dataSource = self
         collectionView.delegate = self
         view.addSubview(collectionView)
     }
 }
 
-extension JPFloatingWindowViewController {
+extension WebListViewController {
     @objc fileprivate func goWebVC() {
-        let webVC = JPWebViewController(urlString: "https://www.bilibili.com", uiSwitch.isOn)
+        let webVC = WebViewController(urlString: "https://www.bilibili.com", uiSwitch.isOn)
         navigationController?.pushViewController(webVC, animated: true)
     }
 }
 
 // MARK:- UICollectionViewDataSource
-extension JPFloatingWindowViewController : UICollectionViewDataSource {
+extension WebListViewController : UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return JPFwManager.floatingWindows.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell : JPFloatingWindowCell = collectionView.dequeueReusableCell(withReuseIdentifier: JPFloatingWindowCellID, for: indexPath) as! JPFloatingWindowCell
+        let cell : WebCell = collectionView.dequeueReusableCell(withReuseIdentifier: WebCellID, for: indexPath) as! WebCell
         
         return cell
     }
 }
 
 // MARK:- UICollectionViewDelegate
-extension JPFloatingWindowViewController : UICollectionViewDelegate {
+extension WebListViewController : UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let floatingWindow = JPFwManager.floatingWindows[indexPath.item]
         

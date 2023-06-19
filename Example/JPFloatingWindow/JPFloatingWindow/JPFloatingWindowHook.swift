@@ -32,6 +32,7 @@ extension UIPercentDrivenInteractiveTransition: JPHookProtocol {
             jp_cancel()
             return
         }
+        
         if JPFwAnimator.decideView.isTouching == true {
             finish()
         } else {
@@ -42,18 +43,35 @@ extension UIPercentDrivenInteractiveTransition: JPHookProtocol {
 
 extension UINavigationController: JPHookProtocol {
     internal static let onceHook: Void = {
-        swizzlingInstanceMethods(#selector(pushViewController(_:animated:)),
-                                 #selector(jp_pushViewController(_:animated:)))
-        swizzlingInstanceMethods(#selector(popViewController(animated:)),
-                                 #selector(jp_popViewController(animated:)))
-        swizzlingInstanceMethods(Selector(("_updateInteractiveTransition:")),
-                                 #selector(jp_updateInteractiveTransition(percent:)))
-        swizzlingInstanceMethods(Selector(("_finishInteractiveTransition:transitionContext:")),
-                                 #selector(jp_finishInteractiveTransition(percent:transitionContext:)))
-        swizzlingInstanceMethods(Selector(("_cancelInteractiveTransition:transitionContext:")),
-                                 #selector(jp_cancelInteractiveTransition(percent:transitionContext:)))
-        swizzlingInstanceMethods(Selector(("didShowViewController:animated:")),
-                                 #selector(jp_didShowViewController(_:animated:)))
+        swizzlingInstanceMethods(
+            #selector(pushViewController(_:animated:)),
+            #selector(jp_pushViewController(_:animated:))
+        )
+        
+        swizzlingInstanceMethods(
+            #selector(popViewController(animated:)),
+            #selector(jp_popViewController(animated:))
+        )
+        
+        swizzlingInstanceMethods(
+            Selector(("_updateInteractiveTransition:")),
+            #selector(jp_updateInteractiveTransition(percent:))
+        )
+        
+        swizzlingInstanceMethods(
+            Selector(("_finishInteractiveTransition:transitionContext:")),
+            #selector(jp_finishInteractiveTransition(percent:transitionContext:))
+        )
+        
+        swizzlingInstanceMethods(
+            Selector(("_cancelInteractiveTransition:transitionContext:")),
+            #selector(jp_cancelInteractiveTransition(percent:transitionContext:))
+        )
+        
+        swizzlingInstanceMethods(
+            Selector(("didShowViewController:animated:")),
+            #selector(jp_didShowViewController(_:animated:))
+        )
     }()
     
     // pushViewController

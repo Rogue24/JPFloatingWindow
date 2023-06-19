@@ -10,7 +10,7 @@ import UIKit
 
 // 需要浮窗的协议
 protocol JPFloatingWindowProtocol: UIViewController {
-    var jp_isFloatingEnabled : Bool {set get}
+    var jp_isFloatingEnabled : Bool { set get }
     
     func jp_navigationController(_ navCtr: UINavigationController, animationWillBeginFor isPush: Bool, from fromVC: UIViewController, to toVC: UIViewController)
     

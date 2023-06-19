@@ -8,24 +8,20 @@
 
 import UIKit
 import WebKit
+import Combine
 
-class WebViewController: UIViewController {
-    var jp_isFloatingEnabled: Bool
+class WebViewController: UIViewController, JPFloatingWindowProtocol {
+    var jp_isFloatingEnabled: Bool = JPFloatingWindowSwitch.shared.isOn
     
     var urlString : String? {
-        get {
-            return url?.absoluteString
-        }
-        set {
-            if let urlStr = newValue {
-                url = URL(string: urlStr)
-            }
-        }
+        set { url = newValue.map { URL(string: $0) } ?? nil }
+        get { url?.absoluteString }
     }
     fileprivate var url : URL?
     
-    init(urlString: String?, _ isFloatingEnabled: Bool = true) {
-        self.jp_isFloatingEnabled = isFloatingEnabled
+    fileprivate var cancellable: AnyCancellable?
+    
+    init(urlString: String?) {
         super.init(nibName: nil, bundle: nil)
         self.urlString = urlString
     }
@@ -42,11 +38,7 @@ class WebViewController: UIViewController {
         configuration.allowsPictureInPictureMediaPlayback = true
         
         let webView = WKWebView(frame: jp_portraitScreenBounds_, configuration: configuration)
-        if #available(iOS 13.0, *) {
-            webView.backgroundColor = UIColor.secondarySystemBackground
-        } else {
-            webView.backgroundColor = UIColor.white
-        }
+        webView.backgroundColor = UIColor.secondarySystemBackground
         webView.scrollView.backgroundColor = UIColor.white
         webView.allowsBackForwardNavigationGestures = true
         webView.scrollView.alwaysBounceVertical = true
@@ -60,18 +52,12 @@ class WebViewController: UIViewController {
     
     fileprivate let naviBgView : UIView = {
         let naviBar = UIView(frame: CGRect(x: 0, y: 0, width: jp_portraitScreenWidth_, height: jp_navTopMargin_))
-        if #available(iOS 13.0, *) {
-            naviBar.backgroundColor = UIColor.tertiarySystemBackground
-        } else {
-            naviBar.backgroundColor = UIColor.white
-        }
+        naviBar.backgroundColor = UIColor.tertiarySystemBackground
         return naviBar
     }()
     
     fileprivate let floatingEnableBtn : UIButton = {
         let floatingEnableBtn = UIButton(type: .system)
-        floatingEnableBtn.setImage(UIImage(named: "jp_icon_circle"), for: .selected)
-        floatingEnableBtn.setImage(UIImage(named: "jp_icon_circle_delete"), for: .normal)
         floatingEnableBtn.imageEdgeInsets = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
         return floatingEnableBtn
     }()
@@ -100,15 +86,9 @@ class WebViewController: UIViewController {
     }()
     
     fileprivate let bottomView : UIVisualEffectView = {
-        if #available(iOS 13.0, *) {
-            let bottomView = UIVisualEffectView(effect: UIBlurEffect(style: .systemMaterial))
-            bottomView.frame = CGRect(x: 0, y: jp_portraitScreenHeight_, width: jp_portraitScreenWidth_, height: jp_tabBarH_)
-            return bottomView
-        } else {
-            let bottomView = UIVisualEffectView(effect: UIBlurEffect(style: .extraLight))
-            bottomView.frame = CGRect(x: 0, y: jp_portraitScreenHeight_, width: jp_portraitScreenWidth_, height: jp_tabBarH_)
-            return bottomView
-        }
+        let bottomView = UIVisualEffectView(effect: UIBlurEffect(style: .systemMaterial))
+        bottomView.frame = CGRect(x: 0, y: jp_portraitScreenHeight_, width: jp_portraitScreenWidth_, height: jp_tabBarH_)
+        return bottomView
     }()
     
     fileprivate var isProgressing : Bool = false {
@@ -158,14 +138,14 @@ class WebViewController: UIViewController {
             var contentInset = webView.scrollView.contentInset
             contentInset.bottom = newValue ? jp_tabBarH_ : jp_diffTabBarH_
             
-            var scrollIndicatorInsets = webView.scrollView.scrollIndicatorInsets
+            var scrollIndicatorInsets = webView.scrollView.verticalScrollIndicatorInsets
             scrollIndicatorInsets.bottom = newValue ? jp_baseTabBarH_ : 0;
             
             let y = jp_portraitScreenHeight_ - (newValue ? jp_tabBarH_ : 0)
             
             UIView.animate(withDuration: 0.13) {
                 self.webView.scrollView.contentInset = contentInset
-                self.webView.scrollView.scrollIndicatorInsets = scrollIndicatorInsets
+                self.webView.scrollView.verticalScrollIndicatorInsets = scrollIndicatorInsets
                 self.bottomView.frame.origin.y = y
             }
         }
@@ -177,10 +157,18 @@ class WebViewController: UIViewController {
         super.viewDidLoad()
         setupUI()
         setupWebViewObserver(isRemove: false)
+        cancellable = JPFloatingWindowSwitch.shared.$isOn
+            .removeDuplicates()
+            .sink { [weak self] isOn in
+                self?.floatingEnableBtn.setImage(UIImage(named: isOn ? "jp_icon_circle" : "jp_icon_circle_delete"), for: .normal)
+            }
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        
+        jp_isFloatingEnabled = JPFloatingWindowSwitch.shared.isOn
+        
         guard isRequested == false, let URL = self.url else {
             return
         }
@@ -191,10 +179,11 @@ class WebViewController: UIViewController {
     deinit {
         print("WebViewController壮烈牺牲")
         setupWebViewObserver(isRemove: true)
+        cancellable?.cancel()
     }
 }
 
-// MARK:- UI布局
+// MARK: - UI布局
 extension WebViewController {
     fileprivate func setupUI() {
         title = "加载中..."
@@ -231,11 +220,10 @@ extension WebViewController {
         forwardBtn.addTarget(self, action: #selector(forward), for: .touchUpInside)
         reloadBtn.addTarget(self, action: #selector(reloadWeb), for: .touchUpInside)
         floatingEnableBtn.addTarget(self, action: #selector(floatingEnable), for: .touchUpInside)
-        floatingEnableBtn.isSelected = jp_isFloatingEnabled
     }
 }
 
-// MARK:- KVO
+// MARK: - KVO
 extension WebViewController {
     fileprivate func setupWebViewObserver(isRemove: Bool) {
         if (isRemove) {
@@ -261,36 +249,33 @@ extension WebViewController {
     }
 }
 
-// MARK:- 按钮事件
-extension WebViewController {
-    @objc fileprivate func back() {
-        if webView.canGoBack == true {
-            webView.goBack()
-        }
+// MARK: - 按钮事件
+fileprivate extension WebViewController {
+    @objc func back() {
+        guard webView.canGoBack else { return }
+        webView.goBack()
     }
     
-    @objc fileprivate func forward() {
-        if webView.canGoForward == true {
-            webView.goForward()
-        }
+    @objc func forward() {
+        guard webView.canGoForward else { return }
+        webView.goForward()
     }
     
-    @objc fileprivate func reloadWeb() {
-        if url != nil {
-            UIView.animate(withDuration: 1.0) {
-                self.reloadBtn.transform = CGAffineTransform(rotationAngle: CGFloat.pi)
-            }
-            webView.reload()
+    @objc func reloadWeb() {
+        guard url != nil else { return }
+        UIView.animate(withDuration: 1.0) {
+            self.reloadBtn.transform = CGAffineTransform(rotationAngle: CGFloat.pi)
         }
+        webView.reload()
     }
     
-    @objc fileprivate func floatingEnable() {
-        floatingEnableBtn.isSelected = !floatingEnableBtn.isSelected
-        jp_isFloatingEnabled = floatingEnableBtn.isSelected
+    @objc func floatingEnable() {
+        JPFloatingWindowSwitch.shared.isOn.toggle()
+        jp_isFloatingEnabled = JPFloatingWindowSwitch.shared.isOn
     }
 }
 
-// MARK:- <WKNavigationDelegate>
+// MARK: - <WKNavigationDelegate>
 extension WebViewController : WKNavigationDelegate {
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
         UIView.animate(withDuration: 0.8) {
@@ -299,8 +284,8 @@ extension WebViewController : WKNavigationDelegate {
     }
 }
 
-// MARK:- <JPFloatingWindowProtocol>
-extension WebViewController : JPFloatingWindowProtocol {
+// MARK: - <JPFloatingWindowProtocol>
+extension WebViewController {
     
     func jp_navigationController(_ navCtr: UINavigationController, animationWillBeginFor isPush: Bool, from fromVC: UIViewController, to toVC: UIViewController) {
         guard let navBgView = navCtr.navigationBar.jp_navBgView else {

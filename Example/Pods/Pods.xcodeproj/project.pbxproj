@@ -7,199 +7,124 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		556AF13C45D7B27BACFB6C7AE9C82C44 /* JPFloatingWindow-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D45E821486F1043538C3B8227DD48043 /* JPFloatingWindow-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		55C4E847E32AA34462808B1E72D76335 /* Pods-JPFloatingWindow_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F5F5E0E6CC4ACB529946138B1C6183E4 /* Pods-JPFloatingWindow_Example-dummy.m */; };
-		5E7E4C051C82755B8DA605A837B73544 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
-		759B84F4FB2A0024927A3515BBC191DE /* Pods-JPFloatingWindow_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FCF1D39F8B7F9B76F87C28ACB6A3AC8 /* Pods-JPFloatingWindow_Tests-dummy.m */; };
-		B70CE6D9D3E2AD6FE823F50571319E2A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
-		BAE3C3C1BC12AB5B2BFD01D02FB77A31 /* ReplaceMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43178F4D9D534FE1B4B41B48679CB621 /* ReplaceMe.swift */; };
-		C6B109644BC7A16AC0B7F795485B7C57 /* Pods-JPFloatingWindow_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = ABDB7AC4FC0BF48BFEC094AE55408FEC /* Pods-JPFloatingWindow_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DAE19041A3B5260AB5CCC70E21370E1F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
-		E5A6EC32BAB27D285248A0DC2457D757 /* JPFloatingWindow-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EA8F2F74C08FC25C0FD3639CEF3CF42D /* JPFloatingWindow-dummy.m */; };
-		F571850355FE2525E6115D4B790CAD2C /* Pods-JPFloatingWindow_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 659CFB2ED4395FD6777D2AF697773159 /* Pods-JPFloatingWindow_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0686F1520E8C4ABC55679AAA1B55E221 /* Pods-JPFloatingWindow_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4B0B60D4C26E43FC6B90EE652DEC8C3D /* Pods-JPFloatingWindow_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3569C25326FC4AAC087388C5F6782D30 /* JPFloatingWindow-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4B932EB769ED98362EBECFF7D3FB1B65 /* JPFloatingWindow-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		420E8535E77D0A2ED220FF07E33E8374 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		5619642163886657F36337C0546FD406 /* Pods-JPFloatingWindow_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9971C45800B1C9DB658A76796BE1D56E /* Pods-JPFloatingWindow_Example-dummy.m */; };
+		5B58B10BBAB58FB937E89F15DE4FA6E0 /* JPFloatingWindow-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0020A5905AE326BDF42CA85EEB543F41 /* JPFloatingWindow-dummy.m */; };
+		C0D3A755C3514E39B5CE3CDB3DDE01CD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		DACED9DA235B5FCB1506978D3BA5590D /* ReplaceMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3738BC5E378A8ADE06E8D4DC9D3DC8 /* ReplaceMe.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		34C8228DC4ACE5F39EADA399C33483F9 /* PBXContainerItemProxy */ = {
+		076E6803406362701C287D367197D29A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 4A3FDA03890B8DDBC410B6B46240AF16;
 			remoteInfo = JPFloatingWindow;
 		};
-		9AED56DD07D25272376EB768944D6E32 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 18D936A2F12A2C651A44A0657F02873A;
-			remoteInfo = "Pods-JPFloatingWindow_Example";
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		005334752EBC7163454F27EBF07A5128 /* Pods-JPFloatingWindow_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-JPFloatingWindow_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		05474946C108B7FCF438348DA77CC82B /* JPFloatingWindow.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = JPFloatingWindow.modulemap; sourceTree = "<group>"; };
-		093AD7F24BC668669C6F3996F37749D0 /* Pods-JPFloatingWindow_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JPFloatingWindow_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		0A84725449AA473FBEC8D4E5A02869E1 /* JPFloatingWindow-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "JPFloatingWindow-Info.plist"; sourceTree = "<group>"; };
-		0DB68BFA7CC1DB065F711E757BDACF15 /* Pods-JPFloatingWindow_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JPFloatingWindow_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		242967090BB5417F7762983619FD4494 /* Pods-JPFloatingWindow_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-JPFloatingWindow_Example-frameworks.sh"; sourceTree = "<group>"; };
-		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		35211CE44CC7D3F3B61CAF7CC5249851 /* Pods-JPFloatingWindow_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-JPFloatingWindow_Tests.modulemap"; sourceTree = "<group>"; };
-		39BBE298C3704C4DFDB0EFC55A7D7F3F /* Pods-JPFloatingWindow_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JPFloatingWindow_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		43178F4D9D534FE1B4B41B48679CB621 /* ReplaceMe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ReplaceMe.swift; path = JPFloatingWindow/Classes/ReplaceMe.swift; sourceTree = "<group>"; };
-		659CFB2ED4395FD6777D2AF697773159 /* Pods-JPFloatingWindow_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-JPFloatingWindow_Tests-umbrella.h"; sourceTree = "<group>"; };
-		720DFE1258E5AA4720993815D89537A6 /* JPFloatingWindow.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = JPFloatingWindow.xcconfig; sourceTree = "<group>"; };
-		73A72B9C3EEB9D36471A939C74E772A0 /* Pods_JPFloatingWindow_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_JPFloatingWindow_Example.framework; path = "Pods-JPFloatingWindow_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		7B2D7908600325CB33AE072D975BC458 /* Pods-JPFloatingWindow_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-JPFloatingWindow_Example-Info.plist"; sourceTree = "<group>"; };
-		7CD52EE38D7FF9C9ED47C6D74CB56E8D /* JPFloatingWindow-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JPFloatingWindow-prefix.pch"; sourceTree = "<group>"; };
-		7F2FD922CD06B739F26C9D0C757A42CE /* JPFloatingWindow.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = JPFloatingWindow.framework; path = JPFloatingWindow.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		7FCF1D39F8B7F9B76F87C28ACB6A3AC8 /* Pods-JPFloatingWindow_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-JPFloatingWindow_Tests-dummy.m"; sourceTree = "<group>"; };
-		97F244B169264ABE3C96C510BC57F958 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		0020A5905AE326BDF42CA85EEB543F41 /* JPFloatingWindow-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "JPFloatingWindow-dummy.m"; sourceTree = "<group>"; };
+		02EAD8CB06E53E4219610EBCE9FFC502 /* Pods-JPFloatingWindow_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JPFloatingWindow_Example.release.xcconfig"; sourceTree = "<group>"; };
+		31DCED5AD607008DA99636A9EB2E6A83 /* JPFloatingWindow-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JPFloatingWindow-prefix.pch"; sourceTree = "<group>"; };
+		3EF52912F9E3440206DAD73BF30D45CF /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		4785CD5A8FD48E2A0977C62EFFA15BF8 /* JPFloatingWindow.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = JPFloatingWindow.debug.xcconfig; sourceTree = "<group>"; };
+		4B0B60D4C26E43FC6B90EE652DEC8C3D /* Pods-JPFloatingWindow_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-JPFloatingWindow_Example-umbrella.h"; sourceTree = "<group>"; };
+		4B932EB769ED98362EBECFF7D3FB1B65 /* JPFloatingWindow-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JPFloatingWindow-umbrella.h"; sourceTree = "<group>"; };
+		4EA36F4EB682DAD2926865A24A474ADF /* Pods-JPFloatingWindow_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-JPFloatingWindow_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		531D24C69FA8BB957893A0AD001267F7 /* Pods-JPFloatingWindow_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JPFloatingWindow_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		6300D7764686A8FF729E22F49CD663F8 /* Pods-JPFloatingWindow_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-JPFloatingWindow_Example-frameworks.sh"; sourceTree = "<group>"; };
+		69FC4C5FFF6E9A61506D6376513CBA04 /* Pods-JPFloatingWindow_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-JPFloatingWindow_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		6A1941B79873D79311408EF29E0C1E3E /* JPFloatingWindow.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = JPFloatingWindow.modulemap; sourceTree = "<group>"; };
+		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		73A72B9C3EEB9D36471A939C74E772A0 /* Pods-JPFloatingWindow_Example */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-JPFloatingWindow_Example"; path = Pods_JPFloatingWindow_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		76D500978C39088B76CC529624C820AD /* JPFloatingWindow-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "JPFloatingWindow-Info.plist"; sourceTree = "<group>"; };
+		7F2FD922CD06B739F26C9D0C757A42CE /* JPFloatingWindow */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = JPFloatingWindow; path = JPFloatingWindow.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D3738BC5E378A8ADE06E8D4DC9D3DC8 /* ReplaceMe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ReplaceMe.swift; path = JPFloatingWindow/Classes/ReplaceMe.swift; sourceTree = "<group>"; };
+		907C88F319EA65C8B94D8B0A9740A44A /* Pods-JPFloatingWindow_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-JPFloatingWindow_Example.modulemap"; sourceTree = "<group>"; };
+		9971C45800B1C9DB658A76796BE1D56E /* Pods-JPFloatingWindow_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-JPFloatingWindow_Example-dummy.m"; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		ABDB7AC4FC0BF48BFEC094AE55408FEC /* Pods-JPFloatingWindow_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-JPFloatingWindow_Example-umbrella.h"; sourceTree = "<group>"; };
-		ACE7D05083DDFF1FA668F04B9F70701B /* Pods-JPFloatingWindow_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-JPFloatingWindow_Tests-Info.plist"; sourceTree = "<group>"; };
-		AE19C95A2D35DD549E667E56480EBCE0 /* Pods-JPFloatingWindow_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JPFloatingWindow_Example.release.xcconfig"; sourceTree = "<group>"; };
-		CC6E378A7837AF2206217052EA27F111 /* JPFloatingWindow.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = JPFloatingWindow.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		CCE2D719E691A715BC90A0C88D2B680F /* Pods-JPFloatingWindow_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-JPFloatingWindow_Example.modulemap"; sourceTree = "<group>"; };
-		CDE8DE65669C79ACC4CCA8A6CD323081 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
-		D45E821486F1043538C3B8227DD48043 /* JPFloatingWindow-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JPFloatingWindow-umbrella.h"; sourceTree = "<group>"; };
-		E82DFD6481A23A4DE3E6252CE67F83E3 /* Pods_JPFloatingWindow_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_JPFloatingWindow_Tests.framework; path = "Pods-JPFloatingWindow_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		E9E12A0832C8EEDB65A1999A5DC3DBB6 /* Pods-JPFloatingWindow_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-JPFloatingWindow_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		EA8F2F74C08FC25C0FD3639CEF3CF42D /* JPFloatingWindow-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "JPFloatingWindow-dummy.m"; sourceTree = "<group>"; };
-		F3597C11DA4332E08BED276342364E30 /* Pods-JPFloatingWindow_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-JPFloatingWindow_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		F5F5E0E6CC4ACB529946138B1C6183E4 /* Pods-JPFloatingWindow_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-JPFloatingWindow_Example-dummy.m"; sourceTree = "<group>"; };
-		FB0403827A7EBF51301D962D6847C2B1 /* Pods-JPFloatingWindow_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-JPFloatingWindow_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		B1F7EF490887BC076EEADF6B8B5DC574 /* JPFloatingWindow.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = JPFloatingWindow.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		B2034853C72420305437317BE7D6A840 /* JPFloatingWindow.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = JPFloatingWindow.release.xcconfig; sourceTree = "<group>"; };
+		BF08686CF7B65FED9B1ADC5DB8EFDBA0 /* Pods-JPFloatingWindow_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-JPFloatingWindow_Example-Info.plist"; sourceTree = "<group>"; };
+		DAD3DF9633FE6407F48E7E2DC8BAED91 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		3151EB6BBA4EE4399F542F85762DDA32 /* Frameworks */ = {
+		2025A81F0E5F20D50EAD00CC87877527 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DAE19041A3B5260AB5CCC70E21370E1F /* Foundation.framework in Frameworks */,
+				C0D3A755C3514E39B5CE3CDB3DDE01CD /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		34291F2460BAAF991FDF25067D354EE6 /* Frameworks */ = {
+		B75FED84A700CD44A13DCE63454AFF0C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B70CE6D9D3E2AD6FE823F50571319E2A /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D34A73F018A931C865FE71F5C06DEC37 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				5E7E4C051C82755B8DA605A837B73544 /* Foundation.framework in Frameworks */,
+				420E8535E77D0A2ED220FF07E33E8374 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1764943DABE3362F551A1AAC5B74344A /* Products */ = {
+		04CBBC30230D3A35C866D49AB68A87D2 /* Pod */ = {
 			isa = PBXGroup;
 			children = (
-				7F2FD922CD06B739F26C9D0C757A42CE /* JPFloatingWindow.framework */,
-				73A72B9C3EEB9D36471A939C74E772A0 /* Pods_JPFloatingWindow_Example.framework */,
-				E82DFD6481A23A4DE3E6252CE67F83E3 /* Pods_JPFloatingWindow_Tests.framework */,
+				B1F7EF490887BC076EEADF6B8B5DC574 /* JPFloatingWindow.podspec */,
+				3EF52912F9E3440206DAD73BF30D45CF /* LICENSE */,
+				DAD3DF9633FE6407F48E7E2DC8BAED91 /* README.md */,
 			);
-			name = Products;
+			name = Pod;
 			sourceTree = "<group>";
 		};
-		2C007147603AB9E17CC52ECC2C1F8B9F /* Targets Support Files */ = {
+		578452D2E740E91742655AC8F1636D1F /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				701814AF043B6A0240852C6DA13BE201 /* Pods-JPFloatingWindow_Example */,
-				823E53080474E78786EF597DF3856D52 /* Pods-JPFloatingWindow_Tests */,
+				73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */,
 			);
-			name = "Targets Support Files";
+			name = iOS;
 			sourceTree = "<group>";
 		};
-		47AF68A994EE8E206096D91689CF3910 /* JPFloatingWindow */ = {
+		83FB4344ECB562FF63FC399605D2D46F /* JPFloatingWindow */ = {
 			isa = PBXGroup;
 			children = (
-				43178F4D9D534FE1B4B41B48679CB621 /* ReplaceMe.swift */,
-				C30DBC5B95D50AF76B5973BFFA56242F /* Pod */,
-				48AB99CEF1E07B99E7755B847639CECE /* Support Files */,
+				8D3738BC5E378A8ADE06E8D4DC9D3DC8 /* ReplaceMe.swift */,
+				04CBBC30230D3A35C866D49AB68A87D2 /* Pod */,
+				F7A109758EFCA577BFA3FE5C7078A7DE /* Support Files */,
 			);
 			name = JPFloatingWindow;
 			path = ../..;
 			sourceTree = "<group>";
 		};
-		48AB99CEF1E07B99E7755B847639CECE /* Support Files */ = {
+		85D192420242928BD3F4A1A6A24DF88D /* Pods-JPFloatingWindow_Example */ = {
 			isa = PBXGroup;
 			children = (
-				05474946C108B7FCF438348DA77CC82B /* JPFloatingWindow.modulemap */,
-				720DFE1258E5AA4720993815D89537A6 /* JPFloatingWindow.xcconfig */,
-				EA8F2F74C08FC25C0FD3639CEF3CF42D /* JPFloatingWindow-dummy.m */,
-				0A84725449AA473FBEC8D4E5A02869E1 /* JPFloatingWindow-Info.plist */,
-				7CD52EE38D7FF9C9ED47C6D74CB56E8D /* JPFloatingWindow-prefix.pch */,
-				D45E821486F1043538C3B8227DD48043 /* JPFloatingWindow-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/JPFloatingWindow";
-			sourceTree = "<group>";
-		};
-		701814AF043B6A0240852C6DA13BE201 /* Pods-JPFloatingWindow_Example */ = {
-			isa = PBXGroup;
-			children = (
-				CCE2D719E691A715BC90A0C88D2B680F /* Pods-JPFloatingWindow_Example.modulemap */,
-				005334752EBC7163454F27EBF07A5128 /* Pods-JPFloatingWindow_Example-acknowledgements.markdown */,
-				FB0403827A7EBF51301D962D6847C2B1 /* Pods-JPFloatingWindow_Example-acknowledgements.plist */,
-				F5F5E0E6CC4ACB529946138B1C6183E4 /* Pods-JPFloatingWindow_Example-dummy.m */,
-				242967090BB5417F7762983619FD4494 /* Pods-JPFloatingWindow_Example-frameworks.sh */,
-				7B2D7908600325CB33AE072D975BC458 /* Pods-JPFloatingWindow_Example-Info.plist */,
-				ABDB7AC4FC0BF48BFEC094AE55408FEC /* Pods-JPFloatingWindow_Example-umbrella.h */,
-				39BBE298C3704C4DFDB0EFC55A7D7F3F /* Pods-JPFloatingWindow_Example.debug.xcconfig */,
-				AE19C95A2D35DD549E667E56480EBCE0 /* Pods-JPFloatingWindow_Example.release.xcconfig */,
+				907C88F319EA65C8B94D8B0A9740A44A /* Pods-JPFloatingWindow_Example.modulemap */,
+				4EA36F4EB682DAD2926865A24A474ADF /* Pods-JPFloatingWindow_Example-acknowledgements.markdown */,
+				69FC4C5FFF6E9A61506D6376513CBA04 /* Pods-JPFloatingWindow_Example-acknowledgements.plist */,
+				9971C45800B1C9DB658A76796BE1D56E /* Pods-JPFloatingWindow_Example-dummy.m */,
+				6300D7764686A8FF729E22F49CD663F8 /* Pods-JPFloatingWindow_Example-frameworks.sh */,
+				BF08686CF7B65FED9B1ADC5DB8EFDBA0 /* Pods-JPFloatingWindow_Example-Info.plist */,
+				4B0B60D4C26E43FC6B90EE652DEC8C3D /* Pods-JPFloatingWindow_Example-umbrella.h */,
+				531D24C69FA8BB957893A0AD001267F7 /* Pods-JPFloatingWindow_Example.debug.xcconfig */,
+				02EAD8CB06E53E4219610EBCE9FFC502 /* Pods-JPFloatingWindow_Example.release.xcconfig */,
 			);
 			name = "Pods-JPFloatingWindow_Example";
 			path = "Target Support Files/Pods-JPFloatingWindow_Example";
 			sourceTree = "<group>";
 		};
-		823E53080474E78786EF597DF3856D52 /* Pods-JPFloatingWindow_Tests */ = {
-			isa = PBXGroup;
-			children = (
-				35211CE44CC7D3F3B61CAF7CC5249851 /* Pods-JPFloatingWindow_Tests.modulemap */,
-				F3597C11DA4332E08BED276342364E30 /* Pods-JPFloatingWindow_Tests-acknowledgements.markdown */,
-				E9E12A0832C8EEDB65A1999A5DC3DBB6 /* Pods-JPFloatingWindow_Tests-acknowledgements.plist */,
-				7FCF1D39F8B7F9B76F87C28ACB6A3AC8 /* Pods-JPFloatingWindow_Tests-dummy.m */,
-				ACE7D05083DDFF1FA668F04B9F70701B /* Pods-JPFloatingWindow_Tests-Info.plist */,
-				659CFB2ED4395FD6777D2AF697773159 /* Pods-JPFloatingWindow_Tests-umbrella.h */,
-				093AD7F24BC668669C6F3996F37749D0 /* Pods-JPFloatingWindow_Tests.debug.xcconfig */,
-				0DB68BFA7CC1DB065F711E757BDACF15 /* Pods-JPFloatingWindow_Tests.release.xcconfig */,
-			);
-			name = "Pods-JPFloatingWindow_Tests";
-			path = "Target Support Files/Pods-JPFloatingWindow_Tests";
-			sourceTree = "<group>";
-		};
 		86F59B2002658FBECBAD0EB1A7BDE5BF /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				47AF68A994EE8E206096D91689CF3910 /* JPFloatingWindow */,
+				83FB4344ECB562FF63FC399605D2D46F /* JPFloatingWindow */,
 			);
 			name = "Development Pods";
-			sourceTree = "<group>";
-		};
-		C0834CEBB1379A84116EF29F93051C60 /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */,
-			);
-			name = iOS;
-			sourceTree = "<group>";
-		};
-		C30DBC5B95D50AF76B5973BFFA56242F /* Pod */ = {
-			isa = PBXGroup;
-			children = (
-				CC6E378A7837AF2206217052EA27F111 /* JPFloatingWindow.podspec */,
-				CDE8DE65669C79ACC4CCA8A6CD323081 /* LICENSE */,
-				97F244B169264ABE3C96C510BC57F958 /* README.md */,
-			);
-			name = Pod;
 			sourceTree = "<group>";
 		};
 		CF1408CF629C7361332E53B88F7BD30C = {
@@ -208,43 +133,67 @@
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				86F59B2002658FBECBAD0EB1A7BDE5BF /* Development Pods */,
 				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
-				1764943DABE3362F551A1AAC5B74344A /* Products */,
-				2C007147603AB9E17CC52ECC2C1F8B9F /* Targets Support Files */,
+				DB50C30E2E093366646DFB254643C581 /* Products */,
+				EE4391D676019AF776DB45ECD74B9E9A /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
 		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				C0834CEBB1379A84116EF29F93051C60 /* iOS */,
+				578452D2E740E91742655AC8F1636D1F /* iOS */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DB50C30E2E093366646DFB254643C581 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7F2FD922CD06B739F26C9D0C757A42CE /* JPFloatingWindow */,
+				73A72B9C3EEB9D36471A939C74E772A0 /* Pods-JPFloatingWindow_Example */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EE4391D676019AF776DB45ECD74B9E9A /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				85D192420242928BD3F4A1A6A24DF88D /* Pods-JPFloatingWindow_Example */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		F7A109758EFCA577BFA3FE5C7078A7DE /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				6A1941B79873D79311408EF29E0C1E3E /* JPFloatingWindow.modulemap */,
+				0020A5905AE326BDF42CA85EEB543F41 /* JPFloatingWindow-dummy.m */,
+				76D500978C39088B76CC529624C820AD /* JPFloatingWindow-Info.plist */,
+				31DCED5AD607008DA99636A9EB2E6A83 /* JPFloatingWindow-prefix.pch */,
+				4B932EB769ED98362EBECFF7D3FB1B65 /* JPFloatingWindow-umbrella.h */,
+				4785CD5A8FD48E2A0977C62EFFA15BF8 /* JPFloatingWindow.debug.xcconfig */,
+				B2034853C72420305437317BE7D6A840 /* JPFloatingWindow.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/JPFloatingWindow";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		31E435258F86B30146094DDB89E2281E /* Headers */ = {
+		10EDCF847AF0C0635CA1100706865752 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F571850355FE2525E6115D4B790CAD2C /* Pods-JPFloatingWindow_Tests-umbrella.h in Headers */,
+				3569C25326FC4AAC087388C5F6782D30 /* JPFloatingWindow-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F22441E9A65D2C51F90378059E5E196B /* Headers */ = {
+		982302DCC37E4F84DCE1431AD1A04943 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C6B109644BC7A16AC0B7F795485B7C57 /* Pods-JPFloatingWindow_Example-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F37F7B9AF103243EB97CE84FBF139BA3 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				556AF13C45D7B27BACFB6C7AE9C82C44 /* JPFloatingWindow-umbrella.h in Headers */,
+				0686F1520E8C4ABC55679AAA1B55E221 /* Pods-JPFloatingWindow_Example-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,50 +202,31 @@
 /* Begin PBXNativeTarget section */
 		18D936A2F12A2C651A44A0657F02873A /* Pods-JPFloatingWindow_Example */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 61BE9D058DB5C6CC6089C0C7E2A2908A /* Build configuration list for PBXNativeTarget "Pods-JPFloatingWindow_Example" */;
+			buildConfigurationList = DCD09DE18E9C278518FCD27058E17343 /* Build configuration list for PBXNativeTarget "Pods-JPFloatingWindow_Example" */;
 			buildPhases = (
-				F22441E9A65D2C51F90378059E5E196B /* Headers */,
-				47AA1E3B26BC452A604181597EB1AF6A /* Sources */,
-				D34A73F018A931C865FE71F5C06DEC37 /* Frameworks */,
-				1E8E3672F7664CEDC7DC8463D2E609CB /* Resources */,
+				982302DCC37E4F84DCE1431AD1A04943 /* Headers */,
+				7326A49F86E6566212FDF8EEDAD10E92 /* Sources */,
+				2025A81F0E5F20D50EAD00CC87877527 /* Frameworks */,
+				D0D68BD975EFF1C7CBB21EC57790E612 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				2DD9855CC345FF9DA1A2954018884571 /* PBXTargetDependency */,
+				197A92ED410CE55A569D21BD243F84C8 /* PBXTargetDependency */,
 			);
 			name = "Pods-JPFloatingWindow_Example";
-			productName = "Pods-JPFloatingWindow_Example";
-			productReference = 73A72B9C3EEB9D36471A939C74E772A0 /* Pods_JPFloatingWindow_Example.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		2117E6558628CACCDE5CE6C2C780C581 /* Pods-JPFloatingWindow_Tests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 1258F177DE904F5EE5795C92715263C4 /* Build configuration list for PBXNativeTarget "Pods-JPFloatingWindow_Tests" */;
-			buildPhases = (
-				31E435258F86B30146094DDB89E2281E /* Headers */,
-				B41013E30182942C7B531FDC20067BB8 /* Sources */,
-				34291F2460BAAF991FDF25067D354EE6 /* Frameworks */,
-				29BAD1E03613C2A2024E751497232543 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				0AA8FFFEBD8F5EF42700007295AB1294 /* PBXTargetDependency */,
-			);
-			name = "Pods-JPFloatingWindow_Tests";
-			productName = "Pods-JPFloatingWindow_Tests";
-			productReference = E82DFD6481A23A4DE3E6252CE67F83E3 /* Pods_JPFloatingWindow_Tests.framework */;
+			productName = Pods_JPFloatingWindow_Example;
+			productReference = 73A72B9C3EEB9D36471A939C74E772A0 /* Pods-JPFloatingWindow_Example */;
 			productType = "com.apple.product-type.framework";
 		};
 		4A3FDA03890B8DDBC410B6B46240AF16 /* JPFloatingWindow */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6AEA14D40C5902CBB461954F429FD208 /* Build configuration list for PBXNativeTarget "JPFloatingWindow" */;
+			buildConfigurationList = 1142963A4AF81670ECF6223AB0EE24EB /* Build configuration list for PBXNativeTarget "JPFloatingWindow" */;
 			buildPhases = (
-				F37F7B9AF103243EB97CE84FBF139BA3 /* Headers */,
-				4B1798CF88F6C577B1D9D910A9305E35 /* Sources */,
-				3151EB6BBA4EE4399F542F85762DDA32 /* Frameworks */,
-				20CD5B34D76D5ED2C316D2E7E6AE0300 /* Resources */,
+				10EDCF847AF0C0635CA1100706865752 /* Headers */,
+				BB6903221FCDDEE47914E21C17B84B34 /* Sources */,
+				B75FED84A700CD44A13DCE63454AFF0C /* Frameworks */,
+				67E74CECA140B3992688D675CAE07964 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -304,7 +234,7 @@
 			);
 			name = JPFloatingWindow;
 			productName = JPFloatingWindow;
-			productReference = 7F2FD922CD06B739F26C9D0C757A42CE /* JPFloatingWindow.framework */;
+			productReference = 7F2FD922CD06B739F26C9D0C757A42CE /* JPFloatingWindow */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -313,44 +243,37 @@
 		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1020;
-				LastUpgradeCheck = 1020;
+				LastSwiftUpdateCheck = 1300;
+				LastUpgradeCheck = 1300;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				Base,
 				en,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = 1764943DABE3362F551A1AAC5B74344A /* Products */;
+			productRefGroup = DB50C30E2E093366646DFB254643C581 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				4A3FDA03890B8DDBC410B6B46240AF16 /* JPFloatingWindow */,
 				18D936A2F12A2C651A44A0657F02873A /* Pods-JPFloatingWindow_Example */,
-				2117E6558628CACCDE5CE6C2C780C581 /* Pods-JPFloatingWindow_Tests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		1E8E3672F7664CEDC7DC8463D2E609CB /* Resources */ = {
+		67E74CECA140B3992688D675CAE07964 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		20CD5B34D76D5ED2C316D2E7E6AE0300 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		29BAD1E03613C2A2024E751497232543 /* Resources */ = {
+		D0D68BD975EFF1C7CBB21EC57790E612 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -360,87 +283,40 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		47AA1E3B26BC452A604181597EB1AF6A /* Sources */ = {
+		7326A49F86E6566212FDF8EEDAD10E92 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				55C4E847E32AA34462808B1E72D76335 /* Pods-JPFloatingWindow_Example-dummy.m in Sources */,
+				5619642163886657F36337C0546FD406 /* Pods-JPFloatingWindow_Example-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4B1798CF88F6C577B1D9D910A9305E35 /* Sources */ = {
+		BB6903221FCDDEE47914E21C17B84B34 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E5A6EC32BAB27D285248A0DC2457D757 /* JPFloatingWindow-dummy.m in Sources */,
-				BAE3C3C1BC12AB5B2BFD01D02FB77A31 /* ReplaceMe.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B41013E30182942C7B531FDC20067BB8 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				759B84F4FB2A0024927A3515BBC191DE /* Pods-JPFloatingWindow_Tests-dummy.m in Sources */,
+				5B58B10BBAB58FB937E89F15DE4FA6E0 /* JPFloatingWindow-dummy.m in Sources */,
+				DACED9DA235B5FCB1506978D3BA5590D /* ReplaceMe.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		0AA8FFFEBD8F5EF42700007295AB1294 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "Pods-JPFloatingWindow_Example";
-			target = 18D936A2F12A2C651A44A0657F02873A /* Pods-JPFloatingWindow_Example */;
-			targetProxy = 9AED56DD07D25272376EB768944D6E32 /* PBXContainerItemProxy */;
-		};
-		2DD9855CC345FF9DA1A2954018884571 /* PBXTargetDependency */ = {
+		197A92ED410CE55A569D21BD243F84C8 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = JPFloatingWindow;
 			target = 4A3FDA03890B8DDBC410B6B46240AF16 /* JPFloatingWindow */;
-			targetProxy = 34C8228DC4ACE5F39EADA399C33483F9 /* PBXContainerItemProxy */;
+			targetProxy = 076E6803406362701C287D367197D29A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		028A1F7ADD3E9FA3C7C9F44D2ACA09AA /* Debug */ = {
+		1380B030B157A980DE476146DE3621F4 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 093AD7F24BC668669C6F3996F37749D0 /* Pods-JPFloatingWindow_Tests.debug.xcconfig */;
+			baseConfigurationReference = B2034853C72420305437317BE7D6A840 /* JPFloatingWindow.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-JPFloatingWindow_Tests/Pods-JPFloatingWindow_Tests-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-JPFloatingWindow_Tests/Pods-JPFloatingWindow_Tests.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		225DF28F23884211FECBE96EEECC87B0 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 720DFE1258E5AA4720993815D89537A6 /* JPFloatingWindow.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -452,7 +328,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/JPFloatingWindow/JPFloatingWindow-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/JPFloatingWindow/JPFloatingWindow-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/JPFloatingWindow/JPFloatingWindow.modulemap";
 				PRODUCT_MODULE_NAME = JPFloatingWindow;
@@ -468,11 +344,11 @@
 			};
 			name = Release;
 		};
-		3F867A930450C675310A559036AE3B29 /* Debug */ = {
+		18688F88ACCA2BF20CA8400272193394 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 720DFE1258E5AA4720993815D89537A6 /* JPFloatingWindow.xcconfig */;
+			baseConfigurationReference = 4785CD5A8FD48E2A0977C62EFFA15BF8 /* JPFloatingWindow.debug.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -484,7 +360,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/JPFloatingWindow/JPFloatingWindow-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/JPFloatingWindow/JPFloatingWindow-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/JPFloatingWindow/JPFloatingWindow.modulemap";
 				PRODUCT_MODULE_NAME = JPFloatingWindow;
@@ -499,12 +375,13 @@
 			};
 			name = Debug;
 		};
-		9BC1C32009341FE635C4666E44F62B6D /* Release */ = {
+		75F490794141442E3753E77A00848EC3 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AE19C95A2D35DD549E667E56480EBCE0 /* Pods-JPFloatingWindow_Example.release.xcconfig */;
+			baseConfigurationReference = 531D24C69FA8BB957893A0AD001267F7 /* Pods-JPFloatingWindow_Example.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CODE_SIGN_IDENTITY = "";
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -515,7 +392,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-JPFloatingWindow_Example/Pods-JPFloatingWindow_Example-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-JPFloatingWindow_Example/Pods-JPFloatingWindow_Example.modulemap";
@@ -527,16 +404,16 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
+			name = Debug;
 		};
-		B0087CB4594321EF41619F3181FE120E /* Release */ = {
+		8DE5143C03248BB6CD542DE3963D6F3A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -559,66 +436,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"POD_CONFIGURATION_RELEASE=1",
-					"$(inherited)",
-				);
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				MTL_FAST_MATH = YES;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
-				SWIFT_VERSION = 5.0;
-				SYMROOT = "${SRCROOT}/../build";
-			};
-			name = Release;
-		};
-		B8BCBD0110C2658BB5DAADB9B7D97B92 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -644,7 +462,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -657,12 +475,75 @@
 			};
 			name = Debug;
 		};
-		BDDC3262F8956059F816A4275E1686B0 /* Debug */ = {
+		9E406C6AAF85E580207CD97B0044DEAB /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 39BBE298C3704C4DFDB0EFC55A7D7F3F /* Pods-JPFloatingWindow_Example.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		A1AF886D50D335F3217F2B28F4AA3772 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 02EAD8CB06E53E4219610EBCE9FFC502 /* Pods-JPFloatingWindow_Example.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CODE_SIGN_IDENTITY = "";
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -673,43 +554,10 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-JPFloatingWindow_Example/Pods-JPFloatingWindow_Example-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-JPFloatingWindow_Example/Pods-JPFloatingWindow_Example.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		E0660537F7F7C88B1C3941697C503652 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0DB68BFA7CC1DB065F711E757BDACF15 /* Pods-JPFloatingWindow_Tests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-JPFloatingWindow_Tests/Pods-JPFloatingWindow_Tests-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-JPFloatingWindow_Tests/Pods-JPFloatingWindow_Tests.modulemap";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
@@ -727,11 +575,11 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1258F177DE904F5EE5795C92715263C4 /* Build configuration list for PBXNativeTarget "Pods-JPFloatingWindow_Tests" */ = {
+		1142963A4AF81670ECF6223AB0EE24EB /* Build configuration list for PBXNativeTarget "JPFloatingWindow" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				028A1F7ADD3E9FA3C7C9F44D2ACA09AA /* Debug */,
-				E0660537F7F7C88B1C3941697C503652 /* Release */,
+				18688F88ACCA2BF20CA8400272193394 /* Debug */,
+				1380B030B157A980DE476146DE3621F4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -739,26 +587,17 @@
 		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B8BCBD0110C2658BB5DAADB9B7D97B92 /* Debug */,
-				B0087CB4594321EF41619F3181FE120E /* Release */,
+				8DE5143C03248BB6CD542DE3963D6F3A /* Debug */,
+				9E406C6AAF85E580207CD97B0044DEAB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		61BE9D058DB5C6CC6089C0C7E2A2908A /* Build configuration list for PBXNativeTarget "Pods-JPFloatingWindow_Example" */ = {
+		DCD09DE18E9C278518FCD27058E17343 /* Build configuration list for PBXNativeTarget "Pods-JPFloatingWindow_Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				BDDC3262F8956059F816A4275E1686B0 /* Debug */,
-				9BC1C32009341FE635C4666E44F62B6D /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		6AEA14D40C5902CBB461954F429FD208 /* Build configuration list for PBXNativeTarget "JPFloatingWindow" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				3F867A930450C675310A559036AE3B29 /* Debug */,
-				225DF28F23884211FECBE96EEECC87B0 /* Release */,
+				75F490794141442E3753E77A00848EC3 /* Debug */,
+				A1AF886D50D335F3217F2B28F4AA3772 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -22,7 +22,7 @@ extension UIColor {
     }
 }
 
-// MARK:- 从颜色中获取rgb的值
+// MARK: - 从颜色中获取rgb的值
 extension UIColor {
     /**
      * 从颜色中获取rgb的值

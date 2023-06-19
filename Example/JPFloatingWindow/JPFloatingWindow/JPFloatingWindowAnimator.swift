@@ -26,14 +26,14 @@ class JPFloatingWindowAnimator: NSObject {
     }()
 }
 
-// MARK:- <UINavigationControllerDelegate>
+// MARK: - <UINavigationControllerDelegate>
 extension JPFloatingWindowAnimator: UINavigationControllerDelegate {
     func navigationController(_ navigationController: UINavigationController, animationControllerFor operation: UINavigationController.Operation, from fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         return self
     }
 }
 
-// MARK:- <UIViewControllerAnimatedTransitioning>
+// MARK: - <UIViewControllerAnimatedTransitioning>
 extension JPFloatingWindowAnimator: UIViewControllerAnimatedTransitioning {
     func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
         return isPush == true ? 0.5 : 0.3
@@ -58,7 +58,7 @@ extension JPFloatingWindowAnimator: UIViewControllerAnimatedTransitioning {
     }
 }
 
-// MARK:- push&pop结束处理
+// MARK: - push&pop结束处理
 extension JPFloatingWindowAnimator {
     private func clearReferences() {
         navCtr = nil
@@ -98,7 +98,7 @@ extension JPFloatingWindowAnimator {
     }
 }
 
-// MARK:- 浮窗动画
+// MARK: - 浮窗动画
 extension JPFloatingWindowAnimator {
     func jp_startShrinkFloatingWindowAnimation(percent: CGFloat, _ transitionContext: UIViewControllerContextTransitioning? = nil) {
         // 可选校验

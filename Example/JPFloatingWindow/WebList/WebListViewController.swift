@@ -7,14 +7,18 @@
 //
 
 import UIKit
+import Combine
 
 class WebListViewController: UIViewController {
     
     static let cellMargin = (jp_portraitScreenWidth_ - 4 * JPFloatingWindow.size.width) / 5.0
     
-    fileprivate let uiSwitch : UISwitch = {
+    fileprivate var cancellable: AnyCancellable?
+    
+    fileprivate lazy var uiSwitch : UISwitch = {
         let uiSwitch = UISwitch()
-        uiSwitch.isOn = true
+        uiSwitch.transform = CGAffineTransform(scaleX: 0.9, y: 0.9)
+        uiSwitch.addTarget(self, action: #selector(didClickSwitch), for: .valueChanged)
         return uiSwitch
     }()
     
@@ -60,17 +64,31 @@ class WebListViewController: UIViewController {
         collectionView.dataSource = self
         collectionView.delegate = self
         view.addSubview(collectionView)
+        
+        cancellable = JPFloatingWindowSwitch.shared.$isOn
+            .removeDuplicates()
+            .sink { [weak self] isOn in
+                self?.uiSwitch.isOn = isOn
+            }
+    }
+    
+    deinit {
+        cancellable?.cancel()
     }
 }
 
-extension WebListViewController {
-    @objc fileprivate func goWebVC() {
-        let webVC = WebViewController(urlString: "https://www.bilibili.com", uiSwitch.isOn)
+fileprivate extension WebListViewController {
+    @objc func goWebVC() {
+        let webVC = WebViewController(urlString: "https://www.bilibili.com")
         navigationController?.pushViewController(webVC, animated: true)
     }
+    
+    @objc func didClickSwitch() {
+        JPFloatingWindowSwitch.shared.isOn.toggle()
+    }
 }
 
-// MARK:- UICollectionViewDataSource
+// MARK: - UICollectionViewDataSource
 extension WebListViewController : UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return JPFwManager.floatingWindows.count
@@ -83,7 +101,7 @@ extension WebListViewController : UICollectionViewDataSource {
     }
 }
 
-// MARK:- UICollectionViewDelegate
+// MARK: - UICollectionViewDelegate
 extension WebListViewController : UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let floatingWindow = JPFwManager.floatingWindows[indexPath.item]
